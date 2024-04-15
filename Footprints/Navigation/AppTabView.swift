@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+/// A tab view for the app navigation
 struct AppTabView: View {
+    /// The currently selected app screen
     @Binding var selection: AppScreen?
 
     var body: some View {

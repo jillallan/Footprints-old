@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+/// A detail view for the app splitview navigation.
+/// Displays the selected app screen or instructions to navigate to a view
 struct AppDetailColumn: View {
+    /// The currently selected app screen
     var screen: AppScreen?
 
     var body: some View {

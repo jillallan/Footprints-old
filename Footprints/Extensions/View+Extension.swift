@@ -9,6 +9,10 @@ import Foundation
 import SwiftUI
 
 extension View {
+
+    /// Add view modifier for macOS only
+    /// - Parameter modifier: The modifier to add
+    /// - Returns: Some view
     func macOS<Content: View>(_ modifier: (Self) -> Content) -> some View {
         #if os(macOS)
         return modifier(self)

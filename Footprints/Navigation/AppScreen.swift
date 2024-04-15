@@ -13,6 +13,7 @@ import SwiftUI
 // This way we can reference them in those views
 // instead of declaring them twice
 
+/// An enum of the main screens to display in the app navigation
 enum AppScreen: String, Codable, Hashable, Identifiable, CaseIterable {
     case trips
 //    case steps
@@ -20,10 +21,14 @@ enum AppScreen: String, Codable, Hashable, Identifiable, CaseIterable {
 //    case stats
 //    case settings
 
+    /// The id of the app screen cases
+    ///
+    /// This is required for conformance to the identifiable protocol
     var id: AppScreen { self }
 }
 
 extension AppScreen {
+    /// Label to display in the navigation view for the corresponding view
     @ViewBuilder
     var label: some View {
         switch self {
@@ -39,7 +44,8 @@ extension AppScreen {
 //            Label("Settings", systemImage: "gear")
         }
     }
-    
+
+    /// View to navigate to from the main navigation
     @ViewBuilder
     var destination: some View {
         switch self {

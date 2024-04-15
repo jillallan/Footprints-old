@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+/// A sidebar list for the app splitview navigation
 struct AppSidebarList: View {
+    /// The currently selected app screen
     @Binding var selection: AppScreen?
 
     var body: some View {
