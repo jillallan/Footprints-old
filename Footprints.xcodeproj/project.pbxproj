@@ -1,0 +1,857 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
+		7867278D2BCD571A00D21CF5 /* EnvironmentValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */; };
+		7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */; };
+		786728952BCD85A300D21CF5 /* FootprintsWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786728942BCD85A300D21CF5 /* FootprintsWatchApp.swift */; };
+		786728972BCD85A300D21CF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786728962BCD85A300D21CF5 /* ContentView.swift */; };
+		786728992BCD85A400D21CF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786728982BCD85A400D21CF5 /* Assets.xcassets */; };
+		7867289C2BCD85A400D21CF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */; };
+		7867289F2BCD85A400D21CF5 /* Footprints Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 786728922BCD85A300D21CF5 /* Footprints Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		786728A42BCD8DA700D21CF5 /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */; };
+		78CDF5EF2BCDB279001F6466 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
+		78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */; };
+		78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */; };
+		78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F42BCDB536001F6466 /* AppDetailColumn.swift */; };
+		78CDF5F72BCDB595001F6466 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F62BCDB595001F6466 /* View+Extension.swift */; };
+		78CDF6002BCDB7DF001F6466 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5FF2BCDB7DF001F6466 /* TripView.swift */; };
+		78E217012BCD4E5E000C08F9 /* FootprintsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E217002BCD4E5E000C08F9 /* FootprintsApp.swift */; };
+		78E217032BCD4E5E000C08F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E217022BCD4E5E000C08F9 /* ContentView.swift */; };
+		78E217052BCD4E5F000C08F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E217042BCD4E5F000C08F9 /* Assets.xcassets */; };
+		78E217082BCD4E5F000C08F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7867284C2BCD852700D21CF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E216F52BCD4E5E000C08F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78E216FC2BCD4E5E000C08F9;
+			remoteInfo = Footprints;
+		};
+		7867289D2BCD85A400D21CF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E216F52BCD4E5E000C08F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 786728912BCD85A300D21CF5;
+			remoteInfo = "FootprintsWatch Watch App";
+		};
+		78E217162BCD4E7E000C08F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E216F52BCD4E5E000C08F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78E216FC2BCD4E5E000C08F9;
+			remoteInfo = Footprints;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		786728252BCD7E0600D21CF5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7867289F2BCD85A400D21CF5 /* Footprints Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
+		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
+		786728462BCD852700D21CF5 /* FootprintsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		786728922BCD85A300D21CF5 /* Footprints Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Footprints Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		786728942BCD85A300D21CF5 /* FootprintsWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsWatchApp.swift; sourceTree = "<group>"; };
+		786728962BCD85A300D21CF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		786728982BCD85A400D21CF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
+		78CDF5EE2BCDB279001F6466 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
+		78CDF5F42BCDB536001F6466 /* AppDetailColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailColumn.swift; sourceTree = "<group>"; };
+		78CDF5F62BCDB595001F6466 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		78CDF5FF2BCDB7DF001F6466 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		78E216FD2BCD4E5E000C08F9 /* Footprints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Footprints.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78E217002BCD4E5E000C08F9 /* FootprintsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsApp.swift; sourceTree = "<group>"; };
+		78E217022BCD4E5E000C08F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		78E217042BCD4E5F000C08F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		78E217122BCD4E7E000C08F9 /* FootprintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		786728432BCD852700D21CF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7867288F2BCD85A300D21CF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78E216FA2BCD4E5E000C08F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78E2170F2BCD4E7E000C08F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		786728472BCD852700D21CF5 /* FootprintsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */,
+				7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */,
+			);
+			path = FootprintsUITests;
+			sourceTree = "<group>";
+		};
+		786728932BCD85A300D21CF5 /* Footprints Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				786728942BCD85A300D21CF5 /* FootprintsWatchApp.swift */,
+				786728962BCD85A300D21CF5 /* ContentView.swift */,
+				786728982BCD85A400D21CF5 /* Assets.xcassets */,
+				7867289A2BCD85A400D21CF5 /* Preview Content */,
+			);
+			path = "Footprints Watch App";
+			sourceTree = "<group>";
+		};
+		7867289A2BCD85A400D21CF5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		78CDF5ED2BCDB267001F6466 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */,
+				78CDF5EE2BCDB279001F6466 /* AppTabView.swift */,
+				78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */,
+				78CDF5F42BCDB536001F6466 /* AppDetailColumn.swift */,
+				78CDF5FF2BCDB7DF001F6466 /* TripView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		78CDF5F82BCDB67F001F6466 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */,
+				78CDF5F62BCDB595001F6466 /* View+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		78E216F42BCD4E5E000C08F9 = {
+			isa = PBXGroup;
+			children = (
+				78E216FF2BCD4E5E000C08F9 /* Footprints */,
+				78E217132BCD4E7E000C08F9 /* FootprintsTests */,
+				786728472BCD852700D21CF5 /* FootprintsUITests */,
+				786728932BCD85A300D21CF5 /* Footprints Watch App */,
+				78E216FE2BCD4E5E000C08F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78E216FE2BCD4E5E000C08F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78E216FD2BCD4E5E000C08F9 /* Footprints.app */,
+				78E217122BCD4E7E000C08F9 /* FootprintsTests.xctest */,
+				786728462BCD852700D21CF5 /* FootprintsUITests.xctest */,
+				786728922BCD85A300D21CF5 /* Footprints Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78E216FF2BCD4E5E000C08F9 /* Footprints */ = {
+			isa = PBXGroup;
+			children = (
+				78E217002BCD4E5E000C08F9 /* FootprintsApp.swift */,
+				78E217022BCD4E5E000C08F9 /* ContentView.swift */,
+				78CDF5ED2BCDB267001F6466 /* Navigation */,
+				78CDF5F82BCDB67F001F6466 /* Extensions */,
+				78E217042BCD4E5F000C08F9 /* Assets.xcassets */,
+				78E217062BCD4E5F000C08F9 /* Preview Content */,
+			);
+			path = Footprints;
+			sourceTree = "<group>";
+		};
+		78E217062BCD4E5F000C08F9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		78E217132BCD4E7E000C08F9 /* FootprintsTests */ = {
+			isa = PBXGroup;
+			children = (
+				7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */,
+			);
+			path = FootprintsTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		786728452BCD852700D21CF5 /* FootprintsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7867284E2BCD852700D21CF5 /* Build configuration list for PBXNativeTarget "FootprintsUITests" */;
+			buildPhases = (
+				786728422BCD852700D21CF5 /* Sources */,
+				786728432BCD852700D21CF5 /* Frameworks */,
+				786728442BCD852700D21CF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7867284D2BCD852700D21CF5 /* PBXTargetDependency */,
+			);
+			name = FootprintsUITests;
+			productName = FootprintsUITests;
+			productReference = 786728462BCD852700D21CF5 /* FootprintsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		786728912BCD85A300D21CF5 /* Footprints Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 786728A02BCD85A400D21CF5 /* Build configuration list for PBXNativeTarget "Footprints Watch App" */;
+			buildPhases = (
+				7867288E2BCD85A300D21CF5 /* Sources */,
+				7867288F2BCD85A300D21CF5 /* Frameworks */,
+				786728902BCD85A300D21CF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Footprints Watch App";
+			productName = "FootprintsWatch Watch App";
+			productReference = 786728922BCD85A300D21CF5 /* Footprints Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78E216FC2BCD4E5E000C08F9 /* Footprints */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78E2170B2BCD4E5F000C08F9 /* Build configuration list for PBXNativeTarget "Footprints" */;
+			buildPhases = (
+				78E216F92BCD4E5E000C08F9 /* Sources */,
+				78E216FA2BCD4E5E000C08F9 /* Frameworks */,
+				78E216FB2BCD4E5E000C08F9 /* Resources */,
+				786728252BCD7E0600D21CF5 /* Embed Watch Content */,
+				78CDF6022BCDC644001F6466 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7867289E2BCD85A400D21CF5 /* PBXTargetDependency */,
+			);
+			name = Footprints;
+			productName = Footprints;
+			productReference = 78E216FD2BCD4E5E000C08F9 /* Footprints.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78E217112BCD4E7E000C08F9 /* FootprintsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78E217182BCD4E7E000C08F9 /* Build configuration list for PBXNativeTarget "FootprintsTests" */;
+			buildPhases = (
+				78E2170E2BCD4E7E000C08F9 /* Sources */,
+				78E2170F2BCD4E7E000C08F9 /* Frameworks */,
+				78E217102BCD4E7E000C08F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78E217172BCD4E7E000C08F9 /* PBXTargetDependency */,
+			);
+			name = FootprintsTests;
+			productName = FootprintsTests;
+			productReference = 78E217122BCD4E7E000C08F9 /* FootprintsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78E216F52BCD4E5E000C08F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					786728452BCD852700D21CF5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 78E216FC2BCD4E5E000C08F9;
+					};
+					786728912BCD85A300D21CF5 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					78E216FC2BCD4E5E000C08F9 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					78E217112BCD4E7E000C08F9 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 78E216FC2BCD4E5E000C08F9;
+					};
+				};
+			};
+			buildConfigurationList = 78E216F82BCD4E5E000C08F9 /* Build configuration list for PBXProject "Footprints" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78E216F42BCD4E5E000C08F9;
+			productRefGroup = 78E216FE2BCD4E5E000C08F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78E216FC2BCD4E5E000C08F9 /* Footprints */,
+				78E217112BCD4E7E000C08F9 /* FootprintsTests */,
+				786728452BCD852700D21CF5 /* FootprintsUITests */,
+				786728912BCD85A300D21CF5 /* Footprints Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		786728442BCD852700D21CF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		786728902BCD85A300D21CF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7867289C2BCD85A400D21CF5 /* Preview Assets.xcassets in Resources */,
+				786728992BCD85A400D21CF5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78E216FB2BCD4E5E000C08F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78E217082BCD4E5F000C08F9 /* Preview Assets.xcassets in Resources */,
+				78E217052BCD4E5F000C08F9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78E217102BCD4E7E000C08F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78CDF6022BCDC644001F6466 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		786728422BCD852700D21CF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */,
+				786728A42BCD8DA700D21CF5 /* NavigationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7867288E2BCD85A300D21CF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786728972BCD85A300D21CF5 /* ContentView.swift in Sources */,
+				786728952BCD85A300D21CF5 /* FootprintsWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78E216F92BCD4E5E000C08F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78CDF6002BCDB7DF001F6466 /* TripView.swift in Sources */,
+				7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */,
+				78E217032BCD4E5E000C08F9 /* ContentView.swift in Sources */,
+				78CDF5F72BCDB595001F6466 /* View+Extension.swift in Sources */,
+				78CDF5EF2BCDB279001F6466 /* AppTabView.swift in Sources */,
+				78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */,
+				78E217012BCD4E5E000C08F9 /* FootprintsApp.swift in Sources */,
+				78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */,
+				78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78E2170E2BCD4E7E000C08F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7867278D2BCD571A00D21CF5 /* EnvironmentValueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7867284D2BCD852700D21CF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78E216FC2BCD4E5E000C08F9 /* Footprints */;
+			targetProxy = 7867284C2BCD852700D21CF5 /* PBXContainerItemProxy */;
+		};
+		7867289E2BCD85A400D21CF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 786728912BCD85A300D21CF5 /* Footprints Watch App */;
+			targetProxy = 7867289D2BCD85A400D21CF5 /* PBXContainerItemProxy */;
+		};
+		78E217172BCD4E7E000C08F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78E216FC2BCD4E5E000C08F9 /* Footprints */;
+			targetProxy = 78E217162BCD4E7E000C08F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7867284F2BCD852700D21CF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Footprints;
+			};
+			name = Debug;
+		};
+		786728502BCD852700D21CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Footprints;
+			};
+			name = Release;
+		};
+		786728A12BCD85A400D21CF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Footprints Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FootprintsWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.jillallan.Footprints;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.Footprints.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		786728A22BCD85A400D21CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Footprints Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FootprintsWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.jillallan.Footprints;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.Footprints.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
+		78E217092BCD4E5F000C08F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78E2170A2BCD4E5F000C08F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78E2170C2BCD4E5F000C08F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Footprints/Preview Content\"";
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.Footprints;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78E2170D2BCD4E5F000C08F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Footprints/Preview Content\"";
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.Footprints;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		78E217192BCD4E7E000C08F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Footprints.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Footprints";
+			};
+			name = Debug;
+		};
+		78E2171A2BCD4E7E000C08F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Footprints.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Footprints";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7867284E2BCD852700D21CF5 /* Build configuration list for PBXNativeTarget "FootprintsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7867284F2BCD852700D21CF5 /* Debug */,
+				786728502BCD852700D21CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		786728A02BCD85A400D21CF5 /* Build configuration list for PBXNativeTarget "Footprints Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				786728A12BCD85A400D21CF5 /* Debug */,
+				786728A22BCD85A400D21CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78E216F82BCD4E5E000C08F9 /* Build configuration list for PBXProject "Footprints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78E217092BCD4E5F000C08F9 /* Debug */,
+				78E2170A2BCD4E5F000C08F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78E2170B2BCD4E5F000C08F9 /* Build configuration list for PBXNativeTarget "Footprints" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78E2170C2BCD4E5F000C08F9 /* Debug */,
+				78E2170D2BCD4E5F000C08F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78E217182BCD4E7E000C08F9 /* Build configuration list for PBXNativeTarget "FootprintsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78E217192BCD4E7E000C08F9 /* Debug */,
+				78E2171A2BCD4E7E000C08F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78E216F52BCD4E5E000C08F9 /* Project object */;
+}
