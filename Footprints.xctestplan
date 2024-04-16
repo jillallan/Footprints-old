@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "696A65C8-F26E-4E97-AA33-AF059C4217AA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "locationScenario" : {
+      "identifier" : "London, England",
+      "referenceType" : "built-in"
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Footprints.xcodeproj",
+      "identifier" : "78E216FC2BCD4E5E000C08F9",
+      "name" : "Footprints"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Footprints.xcodeproj",
+        "identifier" : "78E217112BCD4E7E000C08F9",
+        "name" : "FootprintsTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Footprints.xcodeproj",
+        "identifier" : "786728452BCD852700D21CF5",
+        "name" : "FootprintsUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -13,5 +13,6 @@ struct FootprintsApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Trip.self])
     }
 }
