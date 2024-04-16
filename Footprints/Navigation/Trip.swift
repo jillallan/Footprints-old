@@ -31,7 +31,8 @@ final class Trip: CustomDebugStringConvertible {
 
     /// Required property for CustomDebugStringConvertible protocol
     var debugDescription: String {
-        "Trip: \(title), start date: \(startDate), end date: \(endDate), tracking: \(isAutoTrackingOn), step count: \(String(describing: steps?.count))"
+        "Trip: \(title), start date: \(startDate), end date: \(endDate), tracking: \(isAutoTrackingOn))"
+        //, step count: \(String(describing: steps?.count))"
     }
 
     // MARK: - Initialization
