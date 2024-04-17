@@ -8,6 +8,7 @@
 import XCTest
 @testable import Footprints
 import SwiftData
+import SwiftUI
 
 final class TestSampleData: ModelContainerTestCase {
 
