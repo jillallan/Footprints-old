@@ -19,7 +19,11 @@ struct SampleDataGenerator {
     @MainActor static func generateSampleData(modelContext: ModelContext) async {
         modelContext.insert(Trip.bedminsterToBeijing)
         modelContext.insert(Trip.mountains)
-        modelContext.insert(Trip.wales)
+        modelContext.insert(Trip.anglesey)
+        modelContext.insert(Trip.france)
+        modelContext.insert(Trip.greece)
+        modelContext.insert(Trip.london)
+        modelContext.insert(Trip.spain)
 
 //        modelContext.insert(Step.stJohnsLane)
 //        modelContext.insert(Step.bedminsterStation)
