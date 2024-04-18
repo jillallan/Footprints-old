@@ -7,8 +7,11 @@
 
 import SwiftUI
 
-/// A detail view for the app splitview navigation.
-/// Displays the selected app screen or instructions to navigate to a view
+/// The navigation detail view for iPad and Mac
+///
+/// For iPhones and TV, tab bar navigation is used,
+/// for ipad and mac split view navigation is used
+/// This displays the selected detail view or instructions to navigate to a view
 struct AppDetailColumn: View {
     /// The currently selected app screen
     var screen: AppScreen?

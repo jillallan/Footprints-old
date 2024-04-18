@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-/// A sidebar list for the app splitview navigation
+/// The navigation view for iPad and Mac
+///
+/// For iPhones and TV, tab bar navigation is used,
+/// for ipad and mac split view navigation is used
 struct AppSidebarList: View {
     /// The currently selected app screen
     @Binding var selection: AppScreen?

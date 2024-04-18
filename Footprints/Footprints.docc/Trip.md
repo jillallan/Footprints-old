@@ -1,13 +1,8 @@
-# <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
-
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
-
-## Overview
-
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
+# ``Trip``
 
 ## Topics
 
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
+### Creating a Trip
 
-- <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
+Add something here
+init(title:startDate:endDate:isAutoTrackingOn:)
