@@ -36,7 +36,7 @@ extension Trip {
         endDate: dateFormatter.date(from: "2016/09/02 12:00:00")!,
         isAutoTrackingOn: false
     )
-    
+
     @MainActor
     /// A sample trip
     static let wales = Trip(

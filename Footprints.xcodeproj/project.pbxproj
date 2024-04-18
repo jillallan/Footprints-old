@@ -26,6 +26,8 @@
 		78BB2ED82BCF175E00CA8776 /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2ED72BCF175E00CA8776 /* TripCard.swift */; };
 		78BB2EDA2BD0209E00CA8776 /* DataPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2ED92BD0209E00CA8776 /* DataPreview.swift */; };
 		78BB2EDC2BD121DF00CA8776 /* Footprints.docc in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EDB2BD121DF00CA8776 /* Footprints.docc */; };
+		78BB2EE32BD13EF100CA8776 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EE22BD13EF100CA8776 /* DateExtensionTests.swift */; };
+		78BB2EE52BD13F5100CA8776 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EE42BD13F5100CA8776 /* Date+Extension.swift */; };
 		78CDF5EF2BCDB279001F6466 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
 		78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */; };
 		78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */; };
@@ -101,6 +103,8 @@
 		78BB2ED92BD0209E00CA8776 /* DataPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPreview.swift; sourceTree = "<group>"; };
 		78BB2EDB2BD121DF00CA8776 /* Footprints.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Footprints.docc; sourceTree = "<group>"; };
 		78BB2EDD2BD1253400CA8776 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		78BB2EE22BD13EF100CA8776 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		78BB2EE42BD13F5100CA8776 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		78CDF5EE2BCDB279001F6466 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 			children = (
 				7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */,
 				78CDF5F62BCDB595001F6466 /* View+Extension.swift */,
+				78BB2EE42BD13F5100CA8776 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				78BB2ED22BCF029400CA8776 /* TestSampleData.swift */,
 				7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */,
 				78BB2ECB2BCEDAAA00CA8776 /* TripTests.swift */,
+				78BB2EE22BD13EF100CA8776 /* DateExtensionTests.swift */,
 			);
 			path = FootprintsTests;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */,
 				78BB2ED82BCF175E00CA8776 /* TripCard.swift in Sources */,
 				78BB2EDC2BD121DF00CA8776 /* Footprints.docc in Sources */,
+				78BB2EE52BD13F5100CA8776 /* Date+Extension.swift in Sources */,
 				78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +510,7 @@
 				7867278D2BCD571A00D21CF5 /* EnvironmentValueTests.swift in Sources */,
 				78BB2ECE2BCEDB1400CA8776 /* MockModelContainer.swift in Sources */,
 				78BB2ED02BCEDB5500CA8776 /* ModelContainerTestCase.swift in Sources */,
+				78BB2EE32BD13EF100CA8776 /* DateExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

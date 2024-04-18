@@ -11,21 +11,22 @@ import SwiftUI
 extension EnvironmentValues {
 
     /// An environment key indicating if the device prefers tab navigation
+    ///
+    /// This is used to apply the tab bar navigation on iPhone and TV platforms.
+    /// Otherwise split view navigation is used
     var prefersTabNavigation: Bool {
         get { self[PrefersTabNavigationEnvironmentKey.self] }
         set { self[PrefersTabNavigationEnvironmentKey.self] = newValue }
     }
 }
 
-// Default value
+/// The default navigation is split view navigation
 struct PrefersTabNavigationEnvironmentKey: EnvironmentKey {
     static var defaultValue: Bool = false
 }
 
 #if os(iOS)
 
-// If iOS return true for phone and tv, false for ipad,
-// will not be run for mac, so default value of false stands, as per above
 extension PrefersTabNavigationEnvironmentKey: UITraitBridgedEnvironmentKey {
 
     /// Reads the user interface idiom from the current UITraitCollection.
@@ -36,11 +37,13 @@ extension PrefersTabNavigationEnvironmentKey: UITraitBridgedEnvironmentKey {
         return traitCollection.userInterfaceIdiom == .phone || traitCollection.userInterfaceIdiom == .tv
     }
 
-    /// Writes the user interface idiom to the current UITraitCollection.
     /// Required by the UITraitBridgedEnvironmentKey protocol
     /// - Parameters:
     ///   - mutableTraits: UIMutableTraits
     ///   - value: Bool
+    ///
+    ///   Writes the user interface idiom to the current UITraitCollection.
+    ///   Not implemented for this extension
     static func write(to mutableTraits: inout UIMutableTraits, value: Bool) {
         // Do not write
     }

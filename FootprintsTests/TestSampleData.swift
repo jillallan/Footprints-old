@@ -19,6 +19,6 @@ final class TestSampleData: ModelContainerTestCase {
 
         let tripCount = try modelContext.fetchCount(fetchDescriptor)
 
-        XCTAssertEqual(tripCount, 2)
+        XCTAssertEqual(tripCount, 3)
     }
 }
