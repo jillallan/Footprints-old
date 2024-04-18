@@ -13,35 +13,48 @@ struct TripView: View {
 #if DEBUG
     @Environment(\.modelContext) private var modelContext
 #endif
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.sizeCategory) private var sizeCategory
     @Query(sort: \Trip.startDate) private var trips: [Trip]
 
-    let columns = [GridItem(.adaptive(minimum: 200, maximum: 400), spacing: 10.0, alignment: .center)]
+    let columnsCompact = [GridItem(spacing: 10.0)]
+    let columnsRegular = Array(repeating: GridItem(spacing: 10.0), count: 3)
+    var columns: [GridItem] {
+        let _ = print(horizontalSizeClass.debugDescription)
+        if horizontalSizeClass == .regular {
+            return columnsRegular
+        } else {
+            return columnsCompact
+        }
+    }
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns, alignment: .center, spacing: 10.0) {
-                    ForEach(trips) { trip in
-                        TripCard(trip: trip)
-                    }
-                }
-            }
-            .padding()
-            .navigationTitle("Trips")
-
-            // MARK: - Debug
-
-#if DEBUG
-            .toolbar {
-                ToolbarItem {
-                    Button("Samples") {
-                        Task {
-                            await createData()
+            HStack {
+//                Spacer(minLength: 10)
+                ScrollView {
+                    LazyVGrid(columns: columns, alignment: .center, spacing: 10.0) {
+                        ForEach(trips) { trip in
+                            TripCard(trip: trip)
                         }
                     }
+//                    .padding()
+                }
+//                Spacer(minLength: 10)
+            }
+
+//            .padding()
+            .navigationTitle("Trips")
+#if DEBUG
+            .onAppear {
+                Task {
+                    // swiftlint:disable:next force_try
+                    try! modelContext.delete(model: Trip.self)
+                    await createData()
                 }
             }
 #endif
+            // MARK: - Debug
         }
     }
 #if DEBUG

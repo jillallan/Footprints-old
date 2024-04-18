@@ -10,7 +10,6 @@
 		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
 		7867278D2BCD571A00D21CF5 /* EnvironmentValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */; };
 		7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */; };
-		786728952BCD85A300D21CF5 /* FootprintsWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786728942BCD85A300D21CF5 /* FootprintsWatchApp.swift */; };
 		786728972BCD85A300D21CF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786728962BCD85A300D21CF5 /* ContentView.swift */; };
 		786728992BCD85A400D21CF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786728982BCD85A400D21CF5 /* Assets.xcassets */; };
 		7867289C2BCD85A400D21CF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */; };
@@ -28,6 +27,16 @@
 		78BB2EDC2BD121DF00CA8776 /* Footprints.docc in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EDB2BD121DF00CA8776 /* Footprints.docc */; };
 		78BB2EE32BD13EF100CA8776 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EE22BD13EF100CA8776 /* DateExtensionTests.swift */; };
 		78BB2EE52BD13F5100CA8776 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EE42BD13F5100CA8776 /* Date+Extension.swift */; };
+		78BB2F022BD1A3F100CA8776 /* FootprintsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E217002BCD4E5E000C08F9 /* FootprintsApp.swift */; };
+		78BB2F032BD1A41800CA8776 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF6072BCDDD93001F6466 /* Trip.swift */; };
+		78BB2F042BD1A43F00CA8776 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5FF2BCDB7DF001F6466 /* TripView.swift */; };
+		78BB2F052BD1A44200CA8776 /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2ED72BCF175E00CA8776 /* TripCard.swift */; };
+		78BB2F062BD1A47200CA8776 /* DataPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2ED92BD0209E00CA8776 /* DataPreview.swift */; };
+		78BB2F072BD1A47200CA8776 /* Trip-SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC52BCED19700CA8776 /* Trip-SampleData.swift */; };
+		78BB2F082BD1A47200CA8776 /* SampleModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC72BCED9AC00CA8776 /* SampleModelContainer.swift */; };
+		78BB2F092BD1A47200CA8776 /* SampleDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC92BCED9FD00CA8776 /* SampleDataGenerator.swift */; };
+		78BB2F0A2BD1A47D00CA8776 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EE42BD13F5100CA8776 /* Date+Extension.swift */; };
+		78BB2F0C2BD1A4B600CA8776 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */; };
 		78CDF5EF2BCDB279001F6466 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
 		78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */; };
 		78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */; };
@@ -86,7 +95,6 @@
 		786728462BCD852700D21CF5 /* FootprintsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		786728922BCD85A300D21CF5 /* Footprints Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Footprints Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		786728942BCD85A300D21CF5 /* FootprintsWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsWatchApp.swift; sourceTree = "<group>"; };
 		786728962BCD85A300D21CF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		786728982BCD85A400D21CF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -166,7 +174,6 @@
 		786728932BCD85A300D21CF5 /* Footprints Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				786728942BCD85A300D21CF5 /* FootprintsWatchApp.swift */,
 				786728962BCD85A300D21CF5 /* ContentView.swift */,
 				786728982BCD85A400D21CF5 /* Assets.xcassets */,
 				7867289A2BCD85A400D21CF5 /* Preview Content */,
@@ -413,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7867289C2BCD85A400D21CF5 /* Preview Assets.xcassets in Resources */,
+				78BB2F0C2BD1A4B600CA8776 /* Preview Assets.xcassets in Resources */,
 				786728992BCD85A400D21CF5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,8 +480,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BB2F032BD1A41800CA8776 /* Trip.swift in Sources */,
 				786728972BCD85A300D21CF5 /* ContentView.swift in Sources */,
-				786728952BCD85A300D21CF5 /* FootprintsWatchApp.swift in Sources */,
+				78BB2F062BD1A47200CA8776 /* DataPreview.swift in Sources */,
+				78BB2F072BD1A47200CA8776 /* Trip-SampleData.swift in Sources */,
+				78BB2F082BD1A47200CA8776 /* SampleModelContainer.swift in Sources */,
+				78BB2F0A2BD1A47D00CA8776 /* Date+Extension.swift in Sources */,
+				78BB2F092BD1A47200CA8776 /* SampleDataGenerator.swift in Sources */,
+				78BB2F022BD1A3F100CA8776 /* FootprintsApp.swift in Sources */,
+				78BB2F042BD1A43F00CA8776 /* TripView.swift in Sources */,
+				78BB2F052BD1A44200CA8776 /* TripCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +608,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = FootprintsWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.jillallan.Footprints;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,6 +639,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = FootprintsWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.jillallan.Footprints;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

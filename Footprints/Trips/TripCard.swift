@@ -9,23 +9,27 @@ import SwiftUI
 
 struct TripCard: View {
     @Bindable var trip: Trip
-
+    
     var body: some View {
-        Image(SampleDataGenerator.randomTripImage)
-            .resizable()
-            .scaledToFit()
-            .overlay {
-                VStack {}
+        VStack {
+            Image(SampleDataGenerator.randomTripImage)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        }
+        .overlay {
+            VStack {}
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(
                     LinearGradient(
-                        colors: [.clear, .black.opacity(0.35)],
+                        colors: [.clear, .black.opacity(0.45)],
                         startPoint: .center,
-                        endPoint: .bottom
+                        endPoint: .bottomLeading
                     )
                 )
-            }
-            .overlay {
+        }
+        .overlay {
+            HStack {
                 VStack {
                     Spacer()
                     Text(trip.title)
@@ -35,8 +39,11 @@ struct TripCard: View {
                 }
                 .foregroundStyle(Color.white)
                 .padding()
+                Spacer()
             }
-            .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .circular))
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .circular))
+        .aspectRatio(1.0, contentMode: .fill)
     }
 }
 
