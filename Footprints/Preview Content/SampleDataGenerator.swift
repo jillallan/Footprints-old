@@ -32,7 +32,6 @@ struct SampleDataGenerator {
 //        Step.bedminsterStation.trip = Trip.bedminsterToBeijing
     }
 
-    
     /// A random image to display in trip view
     static var randomTripImage: ImageResource {
         let images: [ImageResource] = [.china, .everest, .tibet]

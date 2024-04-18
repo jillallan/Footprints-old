@@ -35,7 +35,7 @@ extension Trip {
         endDate: Date.from(string: "2024/04/09 12:00:00"),
         isAutoTrackingOn: false
     )
-    
+
     @MainActor
     /// A sample trip
     static let greece = Trip(
@@ -44,7 +44,7 @@ extension Trip {
         endDate: Date.from(string: "2023/05/24 12:00:00"),
         isAutoTrackingOn: false
     )
-    
+
     @MainActor
     /// A sample trip
     static let london = Trip(
@@ -53,7 +53,7 @@ extension Trip {
         endDate: Date.from(string: "2024/03/02 12:00:00"),
         isAutoTrackingOn: false
     )
-    
+
     @MainActor
     /// A sample trip
     static let france = Trip(
@@ -62,7 +62,7 @@ extension Trip {
         endDate: Date.from(string: "2022/06/25 12:00:00"),
         isAutoTrackingOn: false
     )
-    
+
     @MainActor
     /// A sample trip
     static let spain = Trip(

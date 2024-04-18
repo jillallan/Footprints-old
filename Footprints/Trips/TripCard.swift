@@ -14,7 +14,6 @@ struct TripCard: View {
         Image(SampleDataGenerator.randomTripImage)
             .resizable()
             .scaledToFit()
-            
             .overlay {
                 VStack {}
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

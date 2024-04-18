@@ -10,6 +10,9 @@ import SwiftUI
 
 /// A list of trips
 struct TripView: View {
+#if DEBUG
+    @Environment(\.modelContext) private var modelContext
+#endif
     @Query(sort: \Trip.startDate) private var trips: [Trip]
 
     let columns = [GridItem(.adaptive(minimum: 200, maximum: 400), spacing: 10.0, alignment: .center)]
@@ -25,8 +28,28 @@ struct TripView: View {
             }
             .padding()
             .navigationTitle("Trips")
+
+            // MARK: - Debug
+
+#if DEBUG
+            .toolbar {
+                ToolbarItem {
+                    Button("Samples") {
+                        Task {
+                            await createData()
+                        }
+                    }
+                }
+            }
+#endif
         }
     }
+#if DEBUG
+    @MainActor
+    func createData() async {
+        await SampleDataGenerator.generateSampleData(modelContext: modelContext)
+    }
+#endif
 }
 
 #Preview {
