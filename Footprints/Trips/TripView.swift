@@ -17,27 +17,61 @@ struct TripView: View {
     @Environment(\.sizeCategory) private var sizeCategory
     @Query(sort: \Trip.startDate) private var trips: [Trip]
 
-    let columnsCompact = [GridItem(spacing: 10.0)]
-    let columnsRegular = Array(repeating: GridItem(spacing: 10.0), count: 3)
-    var columns: [GridItem] {
+    @State private var width: CGFloat = .zero
 
-        if !prefersTabNavigation {
-            return columnsRegular
+    var columnsCount: Int {
+        if width > 768 {
+            return 3
+        } else if width > 480 {
+            return 2
         } else {
-            return columnsCompact
+            return 1
         }
+    }
+
+    var columns: [GridItem] {
+        Array(repeating: GridItem(spacing: 10.0), count: columnsCount)
     }
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns, alignment: .center, spacing: 10.0) {
-                    ForEach(trips) { trip in
-                        TripCard(trip: trip)
+            GeometryReader { geometry in
+                ScrollView {
+                    LazyVGrid(
+                        columns: columns,
+                        alignment: .center,
+                        spacing: 10.0
+                    ) {
+                        ForEach(trips) { trip in
+                            TripCard(trip: trip)
+                        }
+                    }
+                    .if(prefersTabNavigation) { view in
+                        view.padding()
+                    }
+                    .if(!prefersTabNavigation) { view in
+                        view
+                            .padding(
+                                .horizontal,
+                                width > 600 ? geometry.size.width * 0.2 : 20
+                            )
+                    }
+                    .onAppear {
+                        width = geometry.size.width
+                    }
+                    .onChange(of: geometry.size.width) {
+                        width = geometry.size.width
                     }
                 }
             }
             .navigationTitle("Trips")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Add Trip", systemImage: "plus") {
+                        // TODO:
+                    }
+                }
+            }
 #if DEBUG
             .onAppear {
                 Task {

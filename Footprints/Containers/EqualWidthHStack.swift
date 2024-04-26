@@ -11,9 +11,9 @@ struct EqualWidthHStack: Layout {
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         let maxSize = maxSize(subviews: subviews)
         let spacing = spacing(subviews: subviews)
-        
+
         let totalSpacing = spacing.reduce(0) { $0 + $1 }
-        
+
         return CGSize(
                 width: maxSize.width * CGFloat(subviews.count) + totalSpacing,
                 height: maxSize.height
@@ -23,19 +23,19 @@ struct EqualWidthHStack: Layout {
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
         let maxSize = maxSize(subviews: subviews)
         let spacing = spacing(subviews: subviews)
-        
+
         let placementProposal = ProposedViewSize(width: maxSize.width, height: maxSize.height)
-        var x = bounds.minX + maxSize.width / 2
-        
+        var firstSubviewPlacement = bounds.minX + maxSize.width / 2
+
         for index in subviews.indices {
             subviews[index].place(
-                at: CGPoint(x: x, y: bounds.midY),
+                at: CGPoint(x: firstSubviewPlacement, y: bounds.midY),
                 anchor: .center,
                 proposal: placementProposal)
-            x += maxSize.width + spacing[index]
+            firstSubviewPlacement += maxSize.width + spacing[index]
         }
     }
-    
+
     private func maxSize(subviews: Subviews) -> CGSize {
         let subviewSizes = subviews.map { $0.sizeThatFits(.unspecified) }
         let maxSize: CGSize = subviewSizes.reduce(.zero) { currentMax, subviewSize in
@@ -46,7 +46,7 @@ struct EqualWidthHStack: Layout {
 
         return maxSize
     }
-    
+
     private func spacing(subviews: Subviews) -> [CGFloat] {
         subviews.indices.map { index in
             guard index < subviews.count - 1 else { return 0 }
@@ -55,8 +55,4 @@ struct EqualWidthHStack: Layout {
                 along: .horizontal)
         }
     }
-}
-
-#Preview {
-    EqualWidthHStack()
 }

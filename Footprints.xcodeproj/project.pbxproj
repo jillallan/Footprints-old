@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		78024F192BDBD4B2002BC7AC /* DynamicGridContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78024F182BDBD4B2002BC7AC /* DynamicGridContainer.swift */; };
 		78024F1C2BDBE09E002BC7AC /* EqualWidthHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78024F1B2BDBE09E002BC7AC /* EqualWidthHStack.swift */; };
+		78024F1D2BDBE29B002BC7AC /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
+		78024F1E2BDBE2A0002BC7AC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F62BCDB595001F6466 /* View+Extension.swift */; };
 		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
 		7867278D2BCD571A00D21CF5 /* EnvironmentValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */; };
 		7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */; };
@@ -502,7 +504,9 @@
 				78BB2F0A2BD1A47D00CA8776 /* Date+Extension.swift in Sources */,
 				78BB2F092BD1A47200CA8776 /* SampleDataGenerator.swift in Sources */,
 				78BB2F022BD1A3F100CA8776 /* FootprintsApp.swift in Sources */,
+				78024F1D2BDBE29B002BC7AC /* EnvironmentValues+Extension.swift in Sources */,
 				78BB2F042BD1A43F00CA8776 /* TripView.swift in Sources */,
+				78024F1E2BDBE2A0002BC7AC /* View+Extension.swift in Sources */,
 				78BB2F052BD1A44200CA8776 /* TripCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

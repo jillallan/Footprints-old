@@ -13,6 +13,6 @@ struct DynamicGridContainer: Layout {
     }
 
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
-        
+
     }
 }

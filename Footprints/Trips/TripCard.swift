@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TripCard: View {
     @Bindable var trip: Trip
-    
+
     var body: some View {
         VStack {
             Image(SampleDataGenerator.randomTripImage)
