@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78024F192BDBD4B2002BC7AC /* DynamicGridContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78024F182BDBD4B2002BC7AC /* DynamicGridContainer.swift */; };
+		78024F1C2BDBE09E002BC7AC /* EqualWidthHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78024F1B2BDBE09E002BC7AC /* EqualWidthHStack.swift */; };
 		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
 		7867278D2BCD571A00D21CF5 /* EnvironmentValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */; };
 		7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */; };
@@ -90,6 +92,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		78024F182BDBD4B2002BC7AC /* DynamicGridContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicGridContainer.swift; sourceTree = "<group>"; };
+		78024F1B2BDBE09E002BC7AC /* EqualWidthHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualWidthHStack.swift; sourceTree = "<group>"; };
 		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
 		786728462BCD852700D21CF5 /* FootprintsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78024F1A2BDBD4B7002BC7AC /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				78024F182BDBD4B2002BC7AC /* DynamicGridContainer.swift */,
+				78024F1B2BDBE09E002BC7AC /* EqualWidthHStack.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
 		786728472BCD852700D21CF5 /* FootprintsUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +262,7 @@
 			children = (
 				78E217002BCD4E5E000C08F9 /* FootprintsApp.swift */,
 				78E217022BCD4E5E000C08F9 /* ContentView.swift */,
+				78024F1A2BDBD4B7002BC7AC /* Containers */,
 				78CDF5ED2BCDB267001F6466 /* Navigation */,
 				78BB2ED52BCF0FBF00CA8776 /* Trips */,
 				78CDF5F82BCDB67F001F6466 /* Extensions */,
@@ -506,6 +520,7 @@
 				78CDF5F72BCDB595001F6466 /* View+Extension.swift in Sources */,
 				78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */,
 				78BB2ECA2BCED9FD00CA8776 /* SampleDataGenerator.swift in Sources */,
+				78024F192BDBD4B2002BC7AC /* DynamicGridContainer.swift in Sources */,
 				78CDF5EF2BCDB279001F6466 /* AppTabView.swift in Sources */,
 				78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */,
 				78E217012BCD4E5E000C08F9 /* FootprintsApp.swift in Sources */,
@@ -513,6 +528,7 @@
 				78BB2ED82BCF175E00CA8776 /* TripCard.swift in Sources */,
 				78BB2EDC2BD121DF00CA8776 /* Footprints.docc in Sources */,
 				78BB2EE52BD13F5100CA8776 /* Date+Extension.swift in Sources */,
+				78024F1C2BDBE09E002BC7AC /* EqualWidthHStack.swift in Sources */,
 				78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
