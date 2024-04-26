@@ -13,7 +13,7 @@ struct TripView: View {
 #if DEBUG
     @Environment(\.modelContext) private var modelContext
 #endif
-    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.prefersTabNavigation) private var prefersTabNavigation
     @Environment(\.sizeCategory) private var sizeCategory
     @Query(sort: \Trip.startDate) private var trips: [Trip]
 
@@ -21,13 +21,13 @@ struct TripView: View {
     let columnsRegular = Array(repeating: GridItem(spacing: 10.0), count: 3)
     var columns: [GridItem] {
 
-        if horizontalSizeClass == .regular {
+        if !prefersTabNavigation {
             return columnsRegular
         } else {
             return columnsCompact
         }
     }
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
