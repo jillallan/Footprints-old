@@ -29,6 +29,7 @@ struct PrefersTabNavigationEnvironmentKey: EnvironmentKey {
     static var defaultValue: Bool = false
 }
 
+/// The operating system the app is running on
 struct OSTypeKey: EnvironmentKey {
     #if os(macOS)
     static var defaultValue: OSType = .macOS
