@@ -20,30 +20,23 @@ struct TripView: View {
     let columnsCompact = [GridItem(spacing: 10.0)]
     let columnsRegular = Array(repeating: GridItem(spacing: 10.0), count: 3)
     var columns: [GridItem] {
-        let _ = print(horizontalSizeClass.debugDescription)
+
         if horizontalSizeClass == .regular {
             return columnsRegular
         } else {
             return columnsCompact
         }
     }
-
+    
     var body: some View {
         NavigationStack {
-            HStack {
-//                Spacer(minLength: 10)
-                ScrollView {
-                    LazyVGrid(columns: columns, alignment: .center, spacing: 10.0) {
-                        ForEach(trips) { trip in
-                            TripCard(trip: trip)
-                        }
+            ScrollView {
+                LazyVGrid(columns: columns, alignment: .center, spacing: 10.0) {
+                    ForEach(trips) { trip in
+                        TripCard(trip: trip)
                     }
-//                    .padding()
                 }
-//                Spacer(minLength: 10)
             }
-
-//            .padding()
             .navigationTitle("Trips")
 #if DEBUG
             .onAppear {

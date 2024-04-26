@@ -8,6 +8,10 @@
 import Foundation
 import SwiftUI
 
+enum OSType {
+    case iOS, macOS, watchOS
+}
+
 extension EnvironmentValues {
 
     /// An environment key indicating if the device prefers tab navigation
@@ -23,6 +27,16 @@ extension EnvironmentValues {
 /// The default navigation is split view navigation
 struct PrefersTabNavigationEnvironmentKey: EnvironmentKey {
     static var defaultValue: Bool = false
+}
+
+struct OSTypeKey: EnvironmentKey {
+    #if os(macOS)
+    static var defaultValue: OSType = .macOS
+    #elseif os(watchOS)
+    static var defaultValue: OSType = .watchOS
+    #else
+    static var defaultValue: OSType = .iOS
+    #endif
 }
 
 #if os(iOS)
