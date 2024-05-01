@@ -83,6 +83,7 @@ struct TripView: View {
 #endif
             // MARK: - Debug
         }
+        
     }
 #if DEBUG
     @MainActor

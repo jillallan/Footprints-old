@@ -34,7 +34,7 @@ struct SampleDataGenerator {
 
     /// A random image to display in trip view
     static var randomTripImage: ImageResource {
-        let images: [ImageResource] = [.china, .everest, .tibet]
+        let images: [ImageResource] = [.china, .everest, .pensford]
         let randomInt = Int.random(in: 0...2)
         return images[randomInt]
     }

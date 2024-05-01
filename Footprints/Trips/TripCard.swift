@@ -44,6 +44,9 @@ struct TripCard: View {
         }
         .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .circular))
         .aspectRatio(1.0, contentMode: .fill)
+//        .iOS { $0.aspectRatio(1.0, contentMode: .fill) }
+//        .macOS { $0.aspectRatio(1.0, contentMode: .fill) }
+//        .watchOS { $0.aspectRatio(1.9, contentMode: .fill) }
     }
 }
 

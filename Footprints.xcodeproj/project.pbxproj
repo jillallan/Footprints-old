@@ -11,6 +11,8 @@
 		78024F1C2BDBE09E002BC7AC /* EqualWidthHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78024F1B2BDBE09E002BC7AC /* EqualWidthHStack.swift */; };
 		78024F1D2BDBE29B002BC7AC /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
 		78024F1E2BDBE2A0002BC7AC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F62BCDB595001F6466 /* View+Extension.swift */; };
+		784473AF2BE29814000E627D /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
+		7861FA9A2BE25AFC00342C61 /* TripViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861FA992BE25AFC00342C61 /* TripViewUITests.swift */; };
 		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
 		7867278D2BCD571A00D21CF5 /* EnvironmentValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */; };
 		7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */; };
@@ -41,7 +43,6 @@
 		78BB2F092BD1A47200CA8776 /* SampleDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC92BCED9FD00CA8776 /* SampleDataGenerator.swift */; };
 		78BB2F0A2BD1A47D00CA8776 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EE42BD13F5100CA8776 /* Date+Extension.swift */; };
 		78BB2F0C2BD1A4B600CA8776 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */; };
-		78CDF5EF2BCDB279001F6466 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
 		78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */; };
 		78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */; };
 		78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F42BCDB536001F6466 /* AppDetailColumn.swift */; };
@@ -96,6 +97,7 @@
 /* Begin PBXFileReference section */
 		78024F182BDBD4B2002BC7AC /* DynamicGridContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicGridContainer.swift; sourceTree = "<group>"; };
 		78024F1B2BDBE09E002BC7AC /* EqualWidthHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualWidthHStack.swift; sourceTree = "<group>"; };
+		7861FA992BE25AFC00342C61 /* TripViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewUITests.swift; sourceTree = "<group>"; };
 		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
 		786728462BCD852700D21CF5 /* FootprintsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 			children = (
 				78CDF6032BCDCD69001F6466 /* FootprintsUITests.swift */,
 				786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */,
+				7861FA992BE25AFC00342C61 /* TripViewUITests.swift */,
 				7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */,
 			);
 			path = FootprintsUITests;
@@ -489,6 +492,7 @@
 				7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */,
 				786728A42BCD8DA700D21CF5 /* NavigationUITests.swift in Sources */,
 				78CDF6042BCDCD69001F6466 /* FootprintsUITests.swift in Sources */,
+				7861FA9A2BE25AFC00342C61 /* TripViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +529,6 @@
 				78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */,
 				78BB2ECA2BCED9FD00CA8776 /* SampleDataGenerator.swift in Sources */,
 				78024F192BDBD4B2002BC7AC /* DynamicGridContainer.swift in Sources */,
-				78CDF5EF2BCDB279001F6466 /* AppTabView.swift in Sources */,
 				78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */,
 				78E217012BCD4E5E000C08F9 /* FootprintsApp.swift in Sources */,
 				78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */,
@@ -533,6 +536,7 @@
 				78BB2EDC2BD121DF00CA8776 /* Footprints.docc in Sources */,
 				78BB2EE52BD13F5100CA8776 /* Date+Extension.swift in Sources */,
 				78024F1C2BDBE09E002BC7AC /* EqualWidthHStack.swift in Sources */,
+				784473AF2BE29814000E627D /* AppTabView.swift in Sources */,
 				78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
