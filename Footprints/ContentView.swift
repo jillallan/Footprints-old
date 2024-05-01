@@ -19,11 +19,6 @@ struct ContentView: View {
     var body: some View {
         if prefersTabNavigation {
             AppTabView(selection: $selection)
-            // without this modifier the lazyVGrid expands beyond the
-            // width of the parent scroll view which causes thw whole navigation
-            // stack to expand beyond the edge of the screen on a physical device
-            // this doesn't happen in a simulator
-                .containerRelativeFrame(.horizontal)
         } else {
             GeometryReader { geometry in
                 NavigationSplitView(columnVisibility: $columnVisibility) {

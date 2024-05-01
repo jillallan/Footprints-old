@@ -12,7 +12,10 @@ struct FootprintsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .frame(minWidth: 750, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
+                .macOS { view in
+                    view
+                        .frame(minWidth: 750, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
+                }
         }
         .modelContainer(for: [Trip.self])
     }
