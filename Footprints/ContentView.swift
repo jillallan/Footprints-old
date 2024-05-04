@@ -23,11 +23,13 @@ struct ContentView: View {
             GeometryReader { geometry in
                 NavigationSplitView(columnVisibility: $columnVisibility) {
                     AppSidebarList(selection: $selection)
-                        .navigationSplitViewColumnWidth(min: 100, ideal: 200, max: 300)
+//                        .navigationSplitViewColumnWidth(min: 100, ideal: 200, max: 300)
                         .macOS { $0.toolbar(removing: .sidebarToggle) }
                 } detail: {
                     AppDetailColumn(screen: selection)
-                        .frame(minWidth: 400)
+//                        .macOS { view in
+//                            view.frame(minWidth: 400)
+//                        }
                 }
                 .onAppear {
                     width = geometry.size.width

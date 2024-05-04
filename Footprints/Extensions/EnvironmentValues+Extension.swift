@@ -8,6 +8,10 @@
 import Foundation
 import SwiftUI
 
+#if swift(>=6.0)
+    #warning("Reevaluate whether this nonisolated(unsafe) decoration on keys is necessary.")
+#endif
+
 enum OSType {
     case iOS, macOS, watchOS
 }
@@ -26,17 +30,17 @@ extension EnvironmentValues {
 
 /// The default navigation is split view navigation
 struct PrefersTabNavigationEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Bool = false
+    nonisolated(unsafe) static var defaultValue: Bool = false
 }
 
 /// The operating system the app is running on
 struct OSTypeKey: EnvironmentKey {
     #if os(macOS)
-    static var defaultValue: OSType = .macOS
+    nonisolated(unsafe) static var defaultValue: OSType = .macOS
     #elseif os(watchOS)
-    static var defaultValue: OSType = .watchOS
+    nonisolated(unsafe) static var defaultValue: OSType = .watchOS
     #else
-    static var defaultValue: OSType = .iOS
+    nonisolated(unsafe) static var defaultValue: OSType = .iOS
     #endif
 }
 

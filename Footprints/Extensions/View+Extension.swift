@@ -32,7 +32,7 @@ extension View {
         }
     }
 
-    /// Add view modifier that applies the specified modifier to a view in macOS only
+    /// A view modifier that applies the specified modifier to a view in macOS only
     /// - Parameter modifier: The modifier to add to the view
     /// - Returns: For macOS returns the modified view, otherwise it returns the original view
     ///
@@ -52,7 +52,7 @@ extension View {
         #endif
     }
 
-    /// Add view modifier that applies the specified modifier to a view in watchOS only
+    /// A view modifier that applies the specified modifier to a view in watchOS only
     /// - Parameter modifier: The modifier to add to the view
     /// - Returns: For watchOS returns the modified view, otherwise it returns the original view
     ///
@@ -72,7 +72,7 @@ extension View {
         #endif
     }
 
-    /// Add view modifier that applies the specified modifier to a view in iOS only
+    /// A view modifier that applies the specified modifier to a view in iOS only
     /// - Parameter modifier: The modifier to add to the view
     /// - Returns: For iOS returns the modified view, otherwise it returns the original view
     ///
@@ -90,5 +90,14 @@ extension View {
         #else
         return self
         #endif
+    }
+
+    /// A view modifier that returns the size of the view it's attached too
+    ///
+    /// It will keep a binding updated with the size
+    /// - Parameter size: The binding to pass to the modifier to keep updated
+    /// - Returns: Returns the view it's attached to unmodified
+    func getSize(_ size: Binding<CGSize>) -> some View {
+        modifier(GetSizeModifier(size: size))
     }
 }

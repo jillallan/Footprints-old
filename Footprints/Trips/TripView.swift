@@ -5,11 +5,18 @@
 //  Created by Jill Allan on 15/04/2024.
 //
 
+import OSLog
 import SwiftData
 import SwiftUI
 
 /// A list of trips
 struct TripView: View {
+#if swift(>=6.0)
+    #warning("Reevaluate whether this decoration is necessary.")
+#endif
+    // MARK: - Debugging
+    nonisolated(unsafe) static let logger = Logger(category: String(describing: TripView.self))
+    
 #if DEBUG
     @Environment(\.modelContext) private var modelContext
 #endif
@@ -17,83 +24,116 @@ struct TripView: View {
     @Environment(\.sizeCategory) private var sizeCategory
     @Query(sort: \Trip.startDate) private var trips: [Trip]
 
-    @State private var width: CGFloat = .zero
+    @State private var size: CGSize = .zero
 
-    var columnsCount: Int {
-        if width > 768 {
-            return 3
-        } else if width > 480 {
-            return 2
+    var gridSpacing: Double {
+        if prefersTabNavigation {
+            20.0
         } else {
-            return 1
+            30.0
         }
     }
 
     var columns: [GridItem] {
-        Array(repeating: GridItem(spacing: 10.0), count: columnsCount)
+        if sizeCategory.isAccessibilityCategory {
+            [GridItem(.adaptive(minimum: 300, maximum: 450), spacing: gridSpacing)]
+        } else {
+            [GridItem(.adaptive(minimum: 240, maximum: 380), spacing: gridSpacing)]
+        }
+    }
+
+    /// Sets the padding to restict the width of the lazy grid view
+    /// Minimum padding of 50 on split view navigation
+    /// Set padding of 30 on tab view navigation
+    var padding: Double {
+        if !prefersTabNavigation {
+            let minimumPadding = 40.0
+            if size.width > 900 {
+                let padding = (size.width - 900) / 2
+                return padding < minimumPadding ? minimumPadding : padding
+            } else {
+                return minimumPadding
+            }
+        } else {
+            return 20.0
+        }
     }
 
     var body: some View {
         NavigationStack {
-            GeometryReader { geometry in
-                ScrollView {
-                    LazyVGrid(
-                        columns: columns,
-                        alignment: .center,
-                        spacing: 10.0
-                    ) {
-                        ForEach(trips) { trip in
+            ScrollView {
+                LazyVGrid(
+                    columns: columns,
+                    alignment: .center,
+                    spacing: gridSpacing
+                ) {
+                    ForEach(trips) { trip in
+                        if sizeCategory.isAccessibilityCategory {
+                            TripCardLargeText(trip: trip)
+                        } else {
                             TripCard(trip: trip)
                         }
-                    }
-                    .if(prefersTabNavigation) { view in
-                        view.padding()
-                    }
-                    .if(!prefersTabNavigation) { view in
-                        view
-                            .padding(
-                                .horizontal,
-                                width > 600 ? geometry.size.width * 0.2 : 20
-                            )
-                    }
-                    .onAppear {
-                        width = geometry.size.width
-                    }
-                    .onChange(of: geometry.size.width) {
-                        width = geometry.size.width
+
                     }
                 }
+                .padding(.horizontal, padding)
             }
+            // MARK: - Navigation
             .navigationTitle("Trips")
+
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Add Trip", systemImage: "plus") {
-                        // TODO:
+
                     }
                 }
             }
+            .getSize($size)
 #if DEBUG
             .onAppear {
                 Task {
-                    // swiftlint:disable:next force_try
-                    try! modelContext.delete(model: Trip.self)
                     await createData()
                 }
             }
 #endif
-            // MARK: - Debug
         }
-        
     }
+
 #if DEBUG
     @MainActor
     func createData() async {
+        // swiftlint:disable:next force_try
+        try! modelContext.delete(model: Trip.self)
         await SampleDataGenerator.generateSampleData(modelContext: modelContext)
     }
 #endif
 }
 
-#Preview {
+#Preview("iphone") {
     TripView()
         .modelContainer(SampleModelContainer.sample())
+}
+
+#Preview("ipad") {
+    NavigationSplitView {
+        List {
+            Text("Trips")
+        }
+    } detail: {
+        TripView()
+            .modelContainer(SampleModelContainer.sample())
+    }
+}
+
+#Preview("macOS") {
+    NavigationSplitView {
+        List {
+            Text("Trips")
+        }
+    } detail: {
+        TripView()
+            .modelContainer(SampleModelContainer.sample())
+    }
+    .frame(width: 900, height: 600)
 }

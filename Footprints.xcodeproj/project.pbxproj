@@ -11,6 +11,12 @@
 		78024F1C2BDBE09E002BC7AC /* EqualWidthHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78024F1B2BDBE09E002BC7AC /* EqualWidthHStack.swift */; };
 		78024F1D2BDBE29B002BC7AC /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
 		78024F1E2BDBE2A0002BC7AC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F62BCDB595001F6466 /* View+Extension.swift */; };
+		7806765F2BE563B60056FAD1 /* GetSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806765E2BE563B60056FAD1 /* GetSizeModifier.swift */; };
+		78119F242BE568B700A556EE /* GetSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806765E2BE563B60056FAD1 /* GetSizeModifier.swift */; };
+		78119F272BE5722900A556EE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F262BE5722900A556EE /* OSLog+Extension.swift */; };
+		78119F282BE5731B00A556EE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F262BE5722900A556EE /* OSLog+Extension.swift */; };
+		78119F2A2BE6631B00A556EE /* TripCardLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F292BE6631B00A556EE /* TripCardLargeText.swift */; };
+		78119F2B2BE6650600A556EE /* TripCardLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F292BE6631B00A556EE /* TripCardLargeText.swift */; };
 		784473AF2BE29814000E627D /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
 		7861FA9A2BE25AFC00342C61 /* TripViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861FA992BE25AFC00342C61 /* TripViewUITests.swift */; };
 		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
@@ -97,6 +103,9 @@
 /* Begin PBXFileReference section */
 		78024F182BDBD4B2002BC7AC /* DynamicGridContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicGridContainer.swift; sourceTree = "<group>"; };
 		78024F1B2BDBE09E002BC7AC /* EqualWidthHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualWidthHStack.swift; sourceTree = "<group>"; };
+		7806765E2BE563B60056FAD1 /* GetSizeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSizeModifier.swift; sourceTree = "<group>"; };
+		78119F262BE5722900A556EE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
+		78119F292BE6631B00A556EE /* TripCardLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardLargeText.swift; sourceTree = "<group>"; };
 		7861FA992BE25AFC00342C61 /* TripViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewUITests.swift; sourceTree = "<group>"; };
 		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
@@ -178,6 +187,14 @@
 			path = Containers;
 			sourceTree = "<group>";
 		};
+		78119F252BE56FC200A556EE /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				7806765E2BE563B60056FAD1 /* GetSizeModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		786728472BCD852700D21CF5 /* FootprintsUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +230,7 @@
 				78CDF6072BCDDD93001F6466 /* Trip.swift */,
 				78CDF5FF2BCDB7DF001F6466 /* TripView.swift */,
 				78BB2ED72BCF175E00CA8776 /* TripCard.swift */,
+				78119F292BE6631B00A556EE /* TripCardLargeText.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -232,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */,
+				78119F262BE5722900A556EE /* OSLog+Extension.swift */,
 				78CDF5F62BCDB595001F6466 /* View+Extension.swift */,
 				78BB2EE42BD13F5100CA8776 /* Date+Extension.swift */,
 			);
@@ -267,6 +286,7 @@
 			children = (
 				78E217002BCD4E5E000C08F9 /* FootprintsApp.swift */,
 				78E217022BCD4E5E000C08F9 /* ContentView.swift */,
+				78119F252BE56FC200A556EE /* ViewModifiers */,
 				78024F1A2BDBD4B7002BC7AC /* Containers */,
 				78CDF5ED2BCDB267001F6466 /* Navigation */,
 				78BB2ED52BCF0FBF00CA8776 /* Trips */,
@@ -503,9 +523,12 @@
 				78BB2F032BD1A41800CA8776 /* Trip.swift in Sources */,
 				786728972BCD85A300D21CF5 /* ContentView.swift in Sources */,
 				78BB2F062BD1A47200CA8776 /* DataPreview.swift in Sources */,
+				78119F2B2BE6650600A556EE /* TripCardLargeText.swift in Sources */,
 				78BB2F072BD1A47200CA8776 /* Trip-SampleData.swift in Sources */,
+				78119F282BE5731B00A556EE /* OSLog+Extension.swift in Sources */,
 				78BB2F082BD1A47200CA8776 /* SampleModelContainer.swift in Sources */,
 				78BB2F0A2BD1A47D00CA8776 /* Date+Extension.swift in Sources */,
+				78119F242BE568B700A556EE /* GetSizeModifier.swift in Sources */,
 				78BB2F092BD1A47200CA8776 /* SampleDataGenerator.swift in Sources */,
 				78BB2F022BD1A3F100CA8776 /* FootprintsApp.swift in Sources */,
 				78024F1D2BDBE29B002BC7AC /* EnvironmentValues+Extension.swift in Sources */,
@@ -522,6 +545,7 @@
 				78CDF6082BCDDD93001F6466 /* Trip.swift in Sources */,
 				78BB2EC82BCED9AC00CA8776 /* SampleModelContainer.swift in Sources */,
 				78CDF6002BCDB7DF001F6466 /* TripView.swift in Sources */,
+				78119F2A2BE6631B00A556EE /* TripCardLargeText.swift in Sources */,
 				78BB2EDA2BD0209E00CA8776 /* DataPreview.swift in Sources */,
 				7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */,
 				78E217032BCD4E5E000C08F9 /* ContentView.swift in Sources */,
@@ -537,6 +561,8 @@
 				78BB2EE52BD13F5100CA8776 /* Date+Extension.swift in Sources */,
 				78024F1C2BDBE09E002BC7AC /* EqualWidthHStack.swift in Sources */,
 				784473AF2BE29814000E627D /* AppTabView.swift in Sources */,
+				78119F272BE5722900A556EE /* OSLog+Extension.swift in Sources */,
+				7806765F2BE563B60056FAD1 /* GetSizeModifier.swift in Sources */,
 				78CDF5F12BCDB2A1001F6466 /* AppScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
