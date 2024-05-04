@@ -46,7 +46,7 @@ final class TripViewUITests: XCTestCase {
             "scroll view width \(scrollViewWidth) should be approx equal to avg width of images: \(averageWidth)"
         )
     }
-    
+
     func testTripView_whenIphoneLandscape_TripsShownInTwoColumns() {
         print(app.debugDescription)
 #if !os(macOS)
@@ -70,7 +70,7 @@ final class TripViewUITests: XCTestCase {
             "scroll view width \(scrollViewWidth) should be approx equal to avg width of images: \(averageWidth)"
         )
     }
-    
+
     func testTripView_whenIpadPotrait_TripsShownInTwoColumns() {
         print(app.debugDescription)
         let scrollView = app.scrollViews

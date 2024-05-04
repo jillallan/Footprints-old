@@ -17,6 +17,7 @@
 		78119F282BE5731B00A556EE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F262BE5722900A556EE /* OSLog+Extension.swift */; };
 		78119F2A2BE6631B00A556EE /* TripCardLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F292BE6631B00A556EE /* TripCardLargeText.swift */; };
 		78119F2B2BE6650600A556EE /* TripCardLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F292BE6631B00A556EE /* TripCardLargeText.swift */; };
+		78119F2D2BE6688E00A556EE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 78119F2C2BE6688E00A556EE /* Localizable.xcstrings */; };
 		784473AF2BE29814000E627D /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
 		7861FA9A2BE25AFC00342C61 /* TripViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861FA992BE25AFC00342C61 /* TripViewUITests.swift */; };
 		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
@@ -106,6 +107,7 @@
 		7806765E2BE563B60056FAD1 /* GetSizeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSizeModifier.swift; sourceTree = "<group>"; };
 		78119F262BE5722900A556EE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		78119F292BE6631B00A556EE /* TripCardLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardLargeText.swift; sourceTree = "<group>"; };
+		78119F2C2BE6688E00A556EE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7861FA992BE25AFC00342C61 /* TripViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewUITests.swift; sourceTree = "<group>"; };
 		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			children = (
 				78BB2EDD2BD1253400CA8776 /* README.md */,
 				78BB2ED12BCEFED600CA8776 /* Footprints.xctestplan */,
+				78119F2C2BE6688E00A556EE /* Localizable.xcstrings */,
 				78E216FF2BCD4E5E000C08F9 /* Footprints */,
 				78E217132BCD4E7E000C08F9 /* FootprintsTests */,
 				786728472BCD852700D21CF5 /* FootprintsUITests */,
@@ -432,6 +435,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 78E216F42BCD4E5E000C08F9;
 			productRefGroup = 78E216FE2BCD4E5E000C08F9 /* Products */;
@@ -470,6 +474,7 @@
 			files = (
 				78E217082BCD4E5F000C08F9 /* Preview Assets.xcassets in Resources */,
 				78E217052BCD4E5F000C08F9 /* Assets.xcassets in Resources */,
+				78119F2D2BE6688E00A556EE /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

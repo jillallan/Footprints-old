@@ -16,7 +16,7 @@ struct TripView: View {
 #endif
     // MARK: - Debugging
     nonisolated(unsafe) static let logger = Logger(category: String(describing: TripView.self))
-    
+
 #if DEBUG
     @Environment(\.modelContext) private var modelContext
 #endif
