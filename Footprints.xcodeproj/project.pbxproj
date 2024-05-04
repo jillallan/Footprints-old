@@ -18,6 +18,7 @@
 		78119F2A2BE6631B00A556EE /* TripCardLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F292BE6631B00A556EE /* TripCardLargeText.swift */; };
 		78119F2B2BE6650600A556EE /* TripCardLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F292BE6631B00A556EE /* TripCardLargeText.swift */; };
 		78119F2D2BE6688E00A556EE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 78119F2C2BE6688E00A556EE /* Localizable.xcstrings */; };
+		78119F2F2BE6746600A556EE /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F2E2BE6746600A556EE /* AddTripView.swift */; };
 		784473AF2BE29814000E627D /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
 		7861FA9A2BE25AFC00342C61 /* TripViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861FA992BE25AFC00342C61 /* TripViewUITests.swift */; };
 		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
@@ -108,6 +109,7 @@
 		78119F262BE5722900A556EE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		78119F292BE6631B00A556EE /* TripCardLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardLargeText.swift; sourceTree = "<group>"; };
 		78119F2C2BE6688E00A556EE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		78119F2E2BE6746600A556EE /* AddTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
 		7861FA992BE25AFC00342C61 /* TripViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewUITests.swift; sourceTree = "<group>"; };
 		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				78CDF5FF2BCDB7DF001F6466 /* TripView.swift */,
 				78BB2ED72BCF175E00CA8776 /* TripCard.swift */,
 				78119F292BE6631B00A556EE /* TripCardLargeText.swift */,
+				78119F2E2BE6746600A556EE /* AddTripView.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78119F2F2BE6746600A556EE /* AddTripView.swift in Sources */,
 				78CDF6082BCDDD93001F6466 /* Trip.swift in Sources */,
 				78BB2EC82BCED9AC00CA8776 /* SampleModelContainer.swift in Sources */,
 				78CDF6002BCDB7DF001F6466 /* TripView.swift in Sources */,
