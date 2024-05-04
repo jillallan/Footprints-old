@@ -80,8 +80,9 @@ struct TripView: View {
             }
             // MARK: - Navigation
             .navigationTitle("Trips")
-
+            #if !os(macOS)
             .toolbarBackground(.hidden, for: .navigationBar)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Add Trip", systemImage: "plus") {
