@@ -8,24 +8,44 @@
 import Foundation
 import SwiftUI
 
+#if swift(>=6.0)
+    #warning("Reevaluate whether this nonisolated(unsafe) decoration on keys is necessary.")
+#endif
+
+enum OSType {
+    case iOS, macOS, watchOS
+}
+
 extension EnvironmentValues {
 
     /// An environment key indicating if the device prefers tab navigation
+    ///
+    /// This is used to apply the tab bar navigation on iPhone and TV platforms.
+    /// Otherwise split view navigation is used
     var prefersTabNavigation: Bool {
         get { self[PrefersTabNavigationEnvironmentKey.self] }
         set { self[PrefersTabNavigationEnvironmentKey.self] = newValue }
     }
 }
 
-// Default value
+/// The default navigation is split view navigation
 struct PrefersTabNavigationEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Bool = false
+    nonisolated(unsafe) static var defaultValue: Bool = false
+}
+
+/// The operating system the app is running on
+struct OSTypeKey: EnvironmentKey {
+    #if os(macOS)
+    nonisolated(unsafe) static var defaultValue: OSType = .macOS
+    #elseif os(watchOS)
+    nonisolated(unsafe) static var defaultValue: OSType = .watchOS
+    #else
+    nonisolated(unsafe) static var defaultValue: OSType = .iOS
+    #endif
 }
 
 #if os(iOS)
 
-// If iOS return true for phone and tv, false for ipad,
-// will not be run for mac, so default value of false stands, as per above
 extension PrefersTabNavigationEnvironmentKey: UITraitBridgedEnvironmentKey {
 
     /// Reads the user interface idiom from the current UITraitCollection.
@@ -36,11 +56,13 @@ extension PrefersTabNavigationEnvironmentKey: UITraitBridgedEnvironmentKey {
         return traitCollection.userInterfaceIdiom == .phone || traitCollection.userInterfaceIdiom == .tv
     }
 
-    /// Writes the user interface idiom to the current UITraitCollection.
     /// Required by the UITraitBridgedEnvironmentKey protocol
     /// - Parameters:
     ///   - mutableTraits: UIMutableTraits
     ///   - value: Bool
+    ///
+    ///   Writes the user interface idiom to the current UITraitCollection.
+    ///   Not implemented for this extension
     static func write(to mutableTraits: inout UIMutableTraits, value: Bool) {
         // Do not write
     }

@@ -11,7 +11,13 @@ import SwiftUI
 struct FootprintsApp: App {
     var body: some Scene {
         WindowGroup {
+//            TestScrollView()
             ContentView()
+                .macOS { view in
+                    view
+                        .frame(minWidth: 750, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
+                }
         }
+        .modelContainer(for: [Trip.self])
     }
 }
