@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct FootprintsApp: App {
+    @StateObject var navigationController = NavigationController()
+
     var body: some Scene {
         WindowGroup {
 //            TestScrollView()
             ContentView()
+                .environmentObject(navigationController)
                 .macOS { view in
                     view
                         .frame(minWidth: 750, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)

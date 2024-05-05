@@ -11,6 +11,7 @@ struct AddTripView: View {
     @Environment(\.sizeCategory) private var sizeCategory
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject var navigationController: NavigationController
 
     // MARK: - Data Properties
     @State var title: String = ""
@@ -52,13 +53,13 @@ struct AddTripView: View {
                     )
                 }
             }
-            
+
             // MARK: - Configuration
             .formStyle(.grouped)
             .macOS { $0.frame(
                 minWidth: 440, maxWidth: .infinity,
                 minHeight: 220, maxHeight: .infinity) }
-            
+
             // MARK: - Navigation
             .navigationTitle("Add Trip")
             .toolbar {
@@ -71,6 +72,7 @@ struct AddTripView: View {
                             endDate: endDate,
                             isAutoTrackingEnabled: isAutoTrackingEnabled
                         )
+                        navigationController.navigationPath.append(trip)
                         dismiss()
                     }
                     .disabled(saveDisabled)

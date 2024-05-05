@@ -31,7 +31,6 @@
 		785BD92E2BE6A5D5006DF738 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */; };
 		785BD92F2BE6A5D8006DF738 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F42BCDB536001F6466 /* AppDetailColumn.swift */; };
 		785BD9312BE6A608006DF738 /* Footprints.docc in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EDB2BD121DF00CA8776 /* Footprints.docc */; };
-		785BD9332BE6ADF3006DF738 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BD9322BE6ADF3006DF738 /* TripView.swift */; };
 		7861FA9A2BE25AFC00342C61 /* TripViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861FA992BE25AFC00342C61 /* TripViewUITests.swift */; };
 		7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
 		7867278D2BCD571A00D21CF5 /* EnvironmentValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */; };
@@ -41,6 +40,7 @@
 		7867289C2BCD85A400D21CF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */; };
 		7867289F2BCD85A400D21CF5 /* Footprints Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 786728922BCD85A300D21CF5 /* Footprints Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		786728A42BCD8DA700D21CF5 /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */; };
+		78774F672BE79D9A00903128 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78774F662BE79D9A00903128 /* TripView.swift */; };
 		78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC52BCED19700CA8776 /* Trip-SampleData.swift */; };
 		78BB2EC82BCED9AC00CA8776 /* SampleModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC72BCED9AC00CA8776 /* SampleModelContainer.swift */; };
 		78BB2ECA2BCED9FD00CA8776 /* SampleDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC92BCED9FD00CA8776 /* SampleDataGenerator.swift */; };
@@ -66,7 +66,6 @@
 		78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */; };
 		78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F42BCDB536001F6466 /* AppDetailColumn.swift */; };
 		78CDF5F72BCDB595001F6466 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F62BCDB595001F6466 /* View+Extension.swift */; };
-		78CDF6002BCDB7DF001F6466 /* TripView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5FF2BCDB7DF001F6466 /* TripView3.swift */; };
 		78CDF6042BCDCD69001F6466 /* FootprintsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF6032BCDCD69001F6466 /* FootprintsUITests.swift */; };
 		78CDF6082BCDDD93001F6466 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF6072BCDDD93001F6466 /* Trip.swift */; };
 		78E217012BCD4E5E000C08F9 /* FootprintsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E217002BCD4E5E000C08F9 /* FootprintsApp.swift */; };
@@ -124,7 +123,6 @@
 		78119F302BE6865500A556EE /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		78119F322BE6887400A556EE /* PersistanceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHandler.swift; sourceTree = "<group>"; };
 		78119F342BE68BF200A556EE /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
-		785BD9322BE6ADF3006DF738 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		7861FA992BE25AFC00342C61 /* TripViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewUITests.swift; sourceTree = "<group>"; };
 		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
@@ -135,6 +133,7 @@
 		786728982BCD85A400D21CF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
+		78774F662BE79D9A00903128 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		78BB2EC52BCED19700CA8776 /* Trip-SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip-SampleData.swift"; sourceTree = "<group>"; };
 		78BB2EC72BCED9AC00CA8776 /* SampleModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModelContainer.swift; sourceTree = "<group>"; };
 		78BB2EC92BCED9FD00CA8776 /* SampleDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataGenerator.swift; sourceTree = "<group>"; };
@@ -154,7 +153,6 @@
 		78CDF5F22BCDB52A001F6466 /* AppSidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
 		78CDF5F42BCDB536001F6466 /* AppDetailColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailColumn.swift; sourceTree = "<group>"; };
 		78CDF5F62BCDB595001F6466 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
-		78CDF5FF2BCDB7DF001F6466 /* TripView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView3.swift; sourceTree = "<group>"; };
 		78CDF6032BCDCD69001F6466 /* FootprintsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsUITests.swift; sourceTree = "<group>"; };
 		78CDF6072BCDDD93001F6466 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		78E216FD2BCD4E5E000C08F9 /* Footprints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Footprints.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,9 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				78CDF6072BCDDD93001F6466 /* Trip.swift */,
-				78CDF5FF2BCDB7DF001F6466 /* TripView3.swift */,
-				785BD9322BE6ADF3006DF738 /* TripView.swift */,
 				78BB2ED72BCF175E00CA8776 /* TripCard.swift */,
+				78774F662BE79D9A00903128 /* TripView.swift */,
 				78119F292BE6631B00A556EE /* TripCardLargeText.swift */,
 				78119F2E2BE6746600A556EE /* AddTripView.swift */,
 			);
@@ -581,15 +578,14 @@
 				78119F312BE6865500A556EE /* NavigationController.swift in Sources */,
 				78CDF6082BCDDD93001F6466 /* Trip.swift in Sources */,
 				78BB2EC82BCED9AC00CA8776 /* SampleModelContainer.swift in Sources */,
-				78CDF6002BCDB7DF001F6466 /* TripView3.swift in Sources */,
 				78119F2A2BE6631B00A556EE /* TripCardLargeText.swift in Sources */,
 				78BB2EDA2BD0209E00CA8776 /* DataPreview.swift in Sources */,
 				7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */,
 				78E217032BCD4E5E000C08F9 /* ContentView.swift in Sources */,
 				78CDF5F72BCDB595001F6466 /* View+Extension.swift in Sources */,
+				78774F672BE79D9A00903128 /* TripView.swift in Sources */,
 				78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */,
 				78119F332BE6887400A556EE /* PersistanceHandler.swift in Sources */,
-				785BD9332BE6ADF3006DF738 /* TripView.swift in Sources */,
 				78BB2ECA2BCED9FD00CA8776 /* SampleDataGenerator.swift in Sources */,
 				78024F192BDBD4B2002BC7AC /* DynamicGridContainer.swift in Sources */,
 				78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */,
