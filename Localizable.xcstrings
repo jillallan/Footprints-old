@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "Add Trip" : {
       "localizations" : {
         "es" : {
@@ -10,6 +13,39 @@
           }
         }
       }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        }
+      }
+    },
+    "Enable automatic trip tracking" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Habilitar el seguimiento automático de viajes"
+          }
+        }
+      }
+    },
+    "End Date" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha final"
+          }
+        }
+      }
+    },
+    "Hello world" : {
+
     },
     "Journal" : {
       "localizations" : {
@@ -21,10 +57,36 @@
         }
       }
     },
+    "Name your trip" : {
+
+    },
     "Pick something from the list." : {
 
     },
+    "Save" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahorrar"
+          }
+        }
+      }
+    },
     "Select a View" : {
+
+    },
+    "Start Date" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha de inicio"
+          }
+        }
+      }
+    },
+    "Trip Title" : {
 
     },
     "Trips" : {

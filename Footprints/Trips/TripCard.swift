@@ -22,6 +22,7 @@ struct TripCard: View {
             .iOS { $0.aspectRatio(1.5, contentMode: .fill) }
             .macOS { $0.aspectRatio(1.0, contentMode: .fill) }
             .watchOS { $0.aspectRatio(1.9, contentMode: .fill) }
+            .shadow(radius: 7)
     }
 }
 
@@ -41,9 +42,11 @@ struct TextOverlay: View {
             gradient
             VStack(alignment: .leading) {
                 Text(trip.title)
-                    .font(.title)
-                    .bold()
+                    .font(.headline)
+//                    .font(.title)
+//                    .bold()
                 Text(trip.startDate, style: .date)
+                    .font(.subheadline)
             }
             .padding()
         }

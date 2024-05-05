@@ -17,9 +17,7 @@ struct TripCardLargeText: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                 .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .circular))
-//                .iOS { $0.aspectRatio(1.5, contentMode: .fill) }
-//                .macOS { $0.aspectRatio(1.0, contentMode: .fill) }
-//                .watchOS { $0.aspectRatio(1.9, contentMode: .fill) }
+                .shadow(radius: 7)
             TextOverlayLargeText(trip: trip)
 
         }

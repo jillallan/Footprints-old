@@ -2,29 +2,29 @@
 //  TripView.swift
 //  Footprints
 //
-//  Created by Jill Allan on 15/04/2024.
+//  Created by Jill Allan on 05/05/2024.
 //
 
 import OSLog
 import SwiftData
 import SwiftUI
 
-/// A list of trips
 struct TripView: View {
 #if swift(>=6.0)
     #warning("Reevaluate whether this decoration is necessary.")
 #endif
     // MARK: - Debugging
     nonisolated(unsafe) static let logger = Logger(category: String(describing: TripView.self))
-
 #if DEBUG
     @Environment(\.modelContext) private var modelContext
 #endif
+    @EnvironmentObject var navigationController: NavigationController
     @Environment(\.prefersTabNavigation) private var prefersTabNavigation
     @Environment(\.sizeCategory) private var sizeCategory
-    @Query(sort: \Trip.startDate) private var trips: [Trip]
 
     @State private var size: CGSize = .zero
+    @State var isAddTripViewPresented: Bool = false
+    @Query(sort: \Trip.startDate) private var trips: [Trip]
 
     var gridSpacing: Double {
         if prefersTabNavigation {
@@ -42,9 +42,11 @@ struct TripView: View {
         }
     }
 
-    /// Sets the padding to restict the width of the lazy grid view
-    /// Minimum padding of 50 on split view navigation
-    /// Set padding of 30 on tab view navigation
+    // Sets the padding to restict the width of the lazy grid view
+    // If you set the size on the lazy grid view itself
+    // it puts the scroll inidcators in the wrong place
+    // Can be fixed with contentMargins but not on mac
+
     var padding: Double {
         if !prefersTabNavigation {
             let minimumPadding = 40.0
@@ -60,7 +62,7 @@ struct TripView: View {
     }
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationController.navigationPath) {
             ScrollView {
                 LazyVGrid(
                     columns: columns,
@@ -68,27 +70,36 @@ struct TripView: View {
                     spacing: gridSpacing
                 ) {
                     ForEach(trips) { trip in
-                        if sizeCategory.isAccessibilityCategory {
-                            TripCardLargeText(trip: trip)
-                        } else {
-                            TripCard(trip: trip)
+                        NavigationLink(value: trip) {
+                            if sizeCategory.isAccessibilityCategory {
+                                TripCardLargeText(trip: trip)
+                            } else {
+                                TripCard(trip: trip)
+                            }
                         }
-
                     }
                 }
                 .padding(.horizontal, padding)
             }
             // MARK: - Navigation
             .navigationTitle("Trips")
-
-            .toolbarBackground(.hidden, for: .navigationBar)
+            .navigationDestination(for: Trip.self) { trip in
+                Text(trip.title)
+            }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Add Trip", systemImage: "plus") {
-
+                        isAddTripViewPresented.toggle()
                     }
                 }
             }
+            .sheet(isPresented: $isAddTripViewPresented) {
+                AddTripView()
+            }
+#if !os(macOS)
+            .toolbarBackground(.hidden, for: .navigationBar)
+#endif
+            // MARK: - View updates
             .getSize($size)
 #if DEBUG
             .onAppear {
@@ -104,36 +115,14 @@ struct TripView: View {
     @MainActor
     func createData() async {
         // swiftlint:disable:next force_try
-        try! modelContext.delete(model: Trip.self)
+//        try! modelContext.delete(model: Trip.self)
         await SampleDataGenerator.generateSampleData(modelContext: modelContext)
     }
 #endif
 }
 
-#Preview("iphone") {
+#Preview {
     TripView()
         .modelContainer(SampleModelContainer.sample())
-}
-
-#Preview("ipad") {
-    NavigationSplitView {
-        List {
-            Text("Trips")
-        }
-    } detail: {
-        TripView()
-            .modelContainer(SampleModelContainer.sample())
-    }
-}
-
-#Preview("macOS") {
-    NavigationSplitView {
-        List {
-            Text("Trips")
-        }
-    } detail: {
-        TripView()
-            .modelContainer(SampleModelContainer.sample())
-    }
-    .frame(width: 900, height: 600)
+        .environmentObject(NavigationController.preview)
 }
