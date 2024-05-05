@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "Add Trip" : {
       "localizations" : {
         "es" : {
@@ -41,6 +44,9 @@
         }
       }
     },
+    "Hello world" : {
+
+    },
     "Journal" : {
       "localizations" : {
         "es" : {
@@ -50,6 +56,9 @@
           }
         }
       }
+    },
+    "Name your trip" : {
+
     },
     "Pick something from the list." : {
 
@@ -76,6 +85,9 @@
           }
         }
       }
+    },
+    "Trip Title" : {
+
     },
     "Trips" : {
       "localizations" : {

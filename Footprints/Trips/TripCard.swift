@@ -42,9 +42,11 @@ struct TextOverlay: View {
             gradient
             VStack(alignment: .leading) {
                 Text(trip.title)
-                    .font(.title)
-                    .bold()
+                    .font(.headline)
+//                    .font(.title)
+//                    .bold()
                 Text(trip.startDate, style: .date)
+                    .font(.subheadline)
             }
             .padding()
         }
