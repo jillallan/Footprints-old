@@ -84,7 +84,7 @@ struct TripView: View {
             // MARK: - Navigation
             .navigationTitle("Trips")
             .navigationDestination(for: Trip.self) { trip in
-                Text(trip.title)
+                TripDetailView(trip: trip)
             }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
