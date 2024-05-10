@@ -21,6 +21,6 @@ struct FootprintsApp: App {
                         .frame(minWidth: 750, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
                 }
         }
-        .modelContainer(for: [Trip.self])
+        .modelContainer(for: [Trip.self], isUndoEnabled: true)
     }
 }

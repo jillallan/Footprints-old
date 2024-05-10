@@ -28,4 +28,6 @@ struct AppTabView: View {
 
 #Preview {
     AppTabView(selection: .constant(.trips))
+        .modelContainer(SampleModelContainer.sample())
+        .environmentObject(NavigationController.preview)
 }

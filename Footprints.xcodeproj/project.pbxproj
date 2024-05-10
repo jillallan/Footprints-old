@@ -15,6 +15,10 @@
 		78091CE52BE902AB001CB204 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CE42BE902AB001CB204 /* TripDetailView.swift */; };
 		78091CE72BE90EBB001CB204 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CE62BE90EBB001CB204 /* TrailingIconLabelStyle.swift */; };
 		78091CEB2BE91738001CB204 /* GreyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CEA2BE91738001CB204 /* GreyButton.swift */; };
+		78091CEF2BE92C42001CB204 /* EditTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CEE2BE92C42001CB204 /* EditTripView.swift */; };
+		78091CF12BE933CE001CB204 /* EditTripForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF02BE933CE001CB204 /* EditTripForm.swift */; };
+		78091CF32BE942F2001CB204 /* EditTripFormLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF22BE942F2001CB204 /* EditTripFormLargeText.swift */; };
+		78091CF52BEA4996001CB204 /* EditTripFormHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF42BEA4996001CB204 /* EditTripFormHost.swift */; };
 		78119F242BE568B700A556EE /* GetSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806765E2BE563B60056FAD1 /* GetSizeModifier.swift */; };
 		78119F272BE5722900A556EE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F262BE5722900A556EE /* OSLog+Extension.swift */; };
 		78119F282BE5731B00A556EE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F262BE5722900A556EE /* OSLog+Extension.swift */; };
@@ -122,6 +126,10 @@
 		78091CE42BE902AB001CB204 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		78091CE62BE90EBB001CB204 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		78091CEA2BE91738001CB204 /* GreyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreyButton.swift; sourceTree = "<group>"; };
+		78091CEE2BE92C42001CB204 /* EditTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripView.swift; sourceTree = "<group>"; };
+		78091CF02BE933CE001CB204 /* EditTripForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripForm.swift; sourceTree = "<group>"; };
+		78091CF22BE942F2001CB204 /* EditTripFormLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripFormLargeText.swift; sourceTree = "<group>"; };
+		78091CF42BEA4996001CB204 /* EditTripFormHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripFormHost.swift; sourceTree = "<group>"; };
 		78119F262BE5722900A556EE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		78119F292BE6631B00A556EE /* TripCardLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardLargeText.swift; sourceTree = "<group>"; };
 		78119F2C2BE6688E00A556EE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -210,6 +218,27 @@
 			path = Containers;
 			sourceTree = "<group>";
 		};
+		78091CF62BEA4B80001CB204 /* TripEditing */ = {
+			isa = PBXGroup;
+			children = (
+				78119F2E2BE6746600A556EE /* AddTripView.swift */,
+				78091CEE2BE92C42001CB204 /* EditTripView.swift */,
+				78091CF42BEA4996001CB204 /* EditTripFormHost.swift */,
+				78091CF02BE933CE001CB204 /* EditTripForm.swift */,
+				78091CF22BE942F2001CB204 /* EditTripFormLargeText.swift */,
+			);
+			path = TripEditing;
+			sourceTree = "<group>";
+		};
+		78091CF72BEA4B96001CB204 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				78091CE62BE90EBB001CB204 /* TrailingIconLabelStyle.swift */,
+				78091CEA2BE91738001CB204 /* GreyButton.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		78119F252BE56FC200A556EE /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,10 +284,8 @@
 				78BB2ED72BCF175E00CA8776 /* TripCard.swift */,
 				78774F662BE79D9A00903128 /* TripView.swift */,
 				78119F292BE6631B00A556EE /* TripCardLargeText.swift */,
-				78119F2E2BE6746600A556EE /* AddTripView.swift */,
 				78091CE42BE902AB001CB204 /* TripDetailView.swift */,
-				78091CE62BE90EBB001CB204 /* TrailingIconLabelStyle.swift */,
-				78091CEA2BE91738001CB204 /* GreyButton.swift */,
+				78091CF62BEA4B80001CB204 /* TripEditing */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -318,6 +345,7 @@
 				78119F322BE6887400A556EE /* PersistanceHandler.swift */,
 				78E217022BCD4E5E000C08F9 /* ContentView.swift */,
 				78119F252BE56FC200A556EE /* ViewModifiers */,
+				78091CF72BEA4B96001CB204 /* Styles */,
 				78024F1A2BDBD4B7002BC7AC /* Containers */,
 				78CDF5ED2BCDB267001F6466 /* Navigation */,
 				78BB2ED52BCF0FBF00CA8776 /* Trips */,
@@ -589,6 +617,7 @@
 				78BB2EC82BCED9AC00CA8776 /* SampleModelContainer.swift in Sources */,
 				78091CE72BE90EBB001CB204 /* TrailingIconLabelStyle.swift in Sources */,
 				78119F2A2BE6631B00A556EE /* TripCardLargeText.swift in Sources */,
+				78091CF12BE933CE001CB204 /* EditTripForm.swift in Sources */,
 				78BB2EDA2BD0209E00CA8776 /* DataPreview.swift in Sources */,
 				7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */,
 				78E217032BCD4E5E000C08F9 /* ContentView.swift in Sources */,
@@ -597,11 +626,14 @@
 				78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */,
 				78119F332BE6887400A556EE /* PersistanceHandler.swift in Sources */,
 				78BB2ECA2BCED9FD00CA8776 /* SampleDataGenerator.swift in Sources */,
+				78091CF52BEA4996001CB204 /* EditTripFormHost.swift in Sources */,
 				78024F192BDBD4B2002BC7AC /* DynamicGridContainer.swift in Sources */,
 				78091CEB2BE91738001CB204 /* GreyButton.swift in Sources */,
 				78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */,
 				78E217012BCD4E5E000C08F9 /* FootprintsApp.swift in Sources */,
 				78091CE52BE902AB001CB204 /* TripDetailView.swift in Sources */,
+				78091CF32BE942F2001CB204 /* EditTripFormLargeText.swift in Sources */,
+				78091CEF2BE92C42001CB204 /* EditTripView.swift in Sources */,
 				78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */,
 				78BB2ED82BCF175E00CA8776 /* TripCard.swift in Sources */,
 				78BB2EDC2BD121DF00CA8776 /* Footprints.docc in Sources */,

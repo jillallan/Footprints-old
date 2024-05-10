@@ -24,6 +24,9 @@
         }
       }
     },
+    "Edit" : {
+
+    },
     "Enable automatic trip tracking" : {
       "localizations" : {
         "es" : {
@@ -82,6 +85,9 @@
           }
         }
       }
+    },
+    "Title" : {
+
     },
     "Trip Title" : {
 

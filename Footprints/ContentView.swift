@@ -53,4 +53,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .modelContainer(SampleModelContainer.sample())
+        .environmentObject(NavigationController.preview)
 }

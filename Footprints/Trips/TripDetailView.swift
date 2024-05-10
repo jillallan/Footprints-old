@@ -9,11 +9,11 @@ import MapKit
 import SwiftUI
 
 struct TripDetailView: View {
+    @Environment(\.modelContext) var modelContext
     @Bindable var trip: Trip
-    @State var isTripTitleBeingEditied: Bool = false
+    @State private var isEditViewPresented: Bool = false
 
     var body: some View {
-
         Map()
             .safeAreaInset(edge: .bottom) {
                 ScrollView(.horizontal) {
@@ -36,12 +36,13 @@ struct TripDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Edit") {
-                        //
+                        isEditViewPresented.toggle()
                     }
                 }
             }
-            .popover(isPresented: $isTripTitleBeingEditied) {
-
+            .sheet(isPresented: $isEditViewPresented) {
+//                EditTripView(tripID: trip.persistentModelID, in: modelContext.container)
+                EditTripView(tripID: trip.id, in: modelContext.container)
             }
 
             .navigationTitle(trip.title)
@@ -66,7 +67,7 @@ struct TripDetailView: View {
 #Preview("Editing title") {
     DataPreview {
         NavigationStack {
-            TripDetailView(trip: .bedminsterToBeijing, isTripTitleBeingEditied: true)
+            TripDetailView(trip: .bedminsterToBeijing)
         }
     } modelContainer: {
         SampleModelContainer.sample()

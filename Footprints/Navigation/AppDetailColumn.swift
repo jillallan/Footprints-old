@@ -38,4 +38,6 @@ struct AppDetailColumn: View {
 
 #Preview {
     AppDetailColumn()
+        .modelContainer(SampleModelContainer.sample())
+        .environmentObject(NavigationController.preview)
 }

@@ -22,7 +22,7 @@ struct TripView: View {
 #endif
     @Environment(\.sizeCategory) private var sizeCategory
 
-    @Query(sort: \Trip.startDate) private var trips: [Trip]
+    @Query(sort: \Trip.startDate, order: .reverse) private var trips: [Trip]
 
     var gridSpacing: Double = 10.0
     let columns: [GridItem] = [GridItem(.flexible(minimum: 135, maximum: 160))]
