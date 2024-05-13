@@ -80,6 +80,7 @@
 		78E217032BCD4E5E000C08F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E217022BCD4E5E000C08F9 /* ContentView.swift */; };
 		78E217052BCD4E5F000C08F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E217042BCD4E5F000C08F9 /* Assets.xcassets */; };
 		78E217082BCD4E5F000C08F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */; };
+		78F1F7712BF2B2AE003562E9 /* XCUIElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1F7702BF2B2AE003562E9 /* XCUIElement+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		78E217042BCD4E5F000C08F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		78E217122BCD4E7E000C08F9 /* FootprintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78F1F7702BF2B2AE003562E9 /* XCUIElement+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 				7861FA992BE25AFC00342C61 /* TripViewUITests.swift */,
 				78091CF82BF24672001CB204 /* TripDetailViewUITests.swift */,
 				7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */,
+				78F1F7702BF2B2AE003562E9 /* XCUIElement+Extension.swift */,
 			);
 			path = FootprintsUITests;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */,
 				786728A42BCD8DA700D21CF5 /* NavigationUITests.swift in Sources */,
 				78091CF92BF24672001CB204 /* TripDetailViewUITests.swift in Sources */,
+				78F1F7712BF2B2AE003562E9 /* XCUIElement+Extension.swift in Sources */,
 				78CDF6042BCDCD69001F6466 /* FootprintsUITests.swift in Sources */,
 				7861FA9A2BE25AFC00342C61 /* TripViewUITests.swift in Sources */,
 			);
