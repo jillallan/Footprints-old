@@ -48,4 +48,13 @@ final class Trip: CustomDebugStringConvertible {
         self.endDate = endDate
         self.isAutoTrackingOn = isAutoTrackingOn
     }
+
+    convenience init(trip: Trip) {
+        self.init(
+            title: trip.title,
+            startDate: trip.startDate,
+            endDate: trip.endDate,
+            isAutoTrackingOn: trip.isAutoTrackingOn
+        )
+    }
 }

@@ -17,4 +17,12 @@ final class TripTests: ModelContainerTestCase {
         dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
+
+    func testTrip_initialiseTripFromTrip_createsMatchingTrip() {
+        
+    }
+
+    func testTrip_equatbleConformance_canCompareTwoTripsForEquailty() {
+
+    }
 }

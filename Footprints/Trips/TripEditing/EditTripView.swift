@@ -13,7 +13,7 @@ struct EditTripView: View {
 
     // MARK: - Data Properties
     @Bindable var trip: Trip
-    var modelContext: ModelContext
+    @State var editedTrip: Trip?
 
     // MARK: - Computed Properties
     var saveDisabled: Bool {
@@ -24,23 +24,21 @@ struct EditTripView: View {
         }
     }
 
-    init(tripID: PersistentIdentifier, in container: ModelContainer) {
-        modelContext = ModelContext(container)
-        modelContext.autosaveEnabled = false
-        trip = modelContext.model(for: tripID) as? Trip ?? Trip()
-    }
-
     var body: some View {
         NavigationStack {
-//            EditTripFormHost(trip: trip)
-            TextField("Title", text: $trip.title)
+            EditTripFormHost(trip: editedTrip ?? trip)
 
             // MARK: - Navigation
             .navigationTitle("Add Trip")
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
-                        try? modelContext.save()
+                        if let editedTrip {
+                            trip.title = editedTrip.title
+                            trip.startDate = editedTrip.startDate
+                            trip.endDate = editedTrip.endDate
+                            trip.isAutoTrackingOn = editedTrip.isAutoTrackingOn
+                        }
                         dismiss()
                     }
                     .disabled(saveDisabled)
@@ -50,6 +48,9 @@ struct EditTripView: View {
                         dismiss()
                     }
                 }
+            }
+            .onAppear {
+                editedTrip = Trip(trip: trip)
             }
         }
     }

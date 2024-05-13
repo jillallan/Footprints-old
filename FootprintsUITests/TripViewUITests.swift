@@ -92,4 +92,12 @@ final class TripViewUITests: XCTestCase {
             "scroll view width \(scrollViewWidth) should be approx equal to avg width of images: \(averageWidth)"
         )
     }
+
+    func testTripView_AddingATrip_ShowsNewTripinTripDetailView() {
+
+    }
+
+    func testTripView_AddingATrip_NewTripShowsInTripView() {
+
+    }
 }

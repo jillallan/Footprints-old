@@ -90,15 +90,11 @@ struct TripView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Add Trip", systemImage: "plus") {
-//                        let newTrip = Trip()
-//                        newTripID = newTrip.id
                         isAddTripViewPresented.toggle()
                     }
                 }
             }
             .sheet(isPresented: $isAddTripViewPresented) {
-//                let trip = Trip(title: "New Trip")
-//                EditTripView(tripID: nil, in: modelContext.container)
                 AddTripView()
             }
 #if !os(macOS)

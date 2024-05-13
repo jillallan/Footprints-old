@@ -19,6 +19,7 @@
 		78091CF12BE933CE001CB204 /* EditTripForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF02BE933CE001CB204 /* EditTripForm.swift */; };
 		78091CF32BE942F2001CB204 /* EditTripFormLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF22BE942F2001CB204 /* EditTripFormLargeText.swift */; };
 		78091CF52BEA4996001CB204 /* EditTripFormHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF42BEA4996001CB204 /* EditTripFormHost.swift */; };
+		78091CF92BF24672001CB204 /* TripDetailViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF82BF24672001CB204 /* TripDetailViewUITests.swift */; };
 		78119F242BE568B700A556EE /* GetSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806765E2BE563B60056FAD1 /* GetSizeModifier.swift */; };
 		78119F272BE5722900A556EE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F262BE5722900A556EE /* OSLog+Extension.swift */; };
 		78119F282BE5731B00A556EE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F262BE5722900A556EE /* OSLog+Extension.swift */; };
@@ -130,6 +131,7 @@
 		78091CF02BE933CE001CB204 /* EditTripForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripForm.swift; sourceTree = "<group>"; };
 		78091CF22BE942F2001CB204 /* EditTripFormLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripFormLargeText.swift; sourceTree = "<group>"; };
 		78091CF42BEA4996001CB204 /* EditTripFormHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripFormHost.swift; sourceTree = "<group>"; };
+		78091CF82BF24672001CB204 /* TripDetailViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewUITests.swift; sourceTree = "<group>"; };
 		78119F262BE5722900A556EE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		78119F292BE6631B00A556EE /* TripCardLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardLargeText.swift; sourceTree = "<group>"; };
 		78119F2C2BE6688E00A556EE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				78CDF6032BCDCD69001F6466 /* FootprintsUITests.swift */,
 				786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */,
 				7861FA992BE25AFC00342C61 /* TripViewUITests.swift */,
+				78091CF82BF24672001CB204 /* TripDetailViewUITests.swift */,
 				7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */,
 			);
 			path = FootprintsUITests;
@@ -573,6 +576,7 @@
 			files = (
 				7867284B2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift in Sources */,
 				786728A42BCD8DA700D21CF5 /* NavigationUITests.swift in Sources */,
+				78091CF92BF24672001CB204 /* TripDetailViewUITests.swift in Sources */,
 				78CDF6042BCDCD69001F6466 /* FootprintsUITests.swift in Sources */,
 				7861FA9A2BE25AFC00342C61 /* TripViewUITests.swift in Sources */,
 			);

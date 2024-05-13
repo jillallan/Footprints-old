@@ -41,8 +41,7 @@ struct TripDetailView: View {
                 }
             }
             .sheet(isPresented: $isEditViewPresented) {
-//                EditTripView(tripID: trip.persistentModelID, in: modelContext.container)
-                EditTripView(tripID: trip.id, in: modelContext.container)
+                EditTripView(trip: trip)
             }
 
             .navigationTitle(trip.title)
