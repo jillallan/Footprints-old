@@ -49,15 +49,17 @@ struct TripView: View {
             // MARK: - Navigation
             .navigationTitle("Trips")
             .toolbarBackground(.hidden, for: .navigationBar)
-
+            .toolbar {
 #if DEBUG
-            .onAppear {
-                Task {
-                    await createData()
+                ToolbarItem {
+                    Button("SAMPLES") {
+                        Task {
+                            await createData()
+                        }
+                    }
                 }
-            }
-
 #endif
+            }
         }
     }
 

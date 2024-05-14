@@ -93,6 +93,15 @@ struct TripView: View {
                         isAddTripViewPresented.toggle()
                     }
                 }
+#if DEBUG
+                ToolbarItem {
+                    Button("SAMPLES") {
+                        Task {
+                            await createData()
+                        }
+                    }
+                }
+#endif
             }
             .sheet(isPresented: $isAddTripViewPresented) {
                 AddTripView()
@@ -102,13 +111,6 @@ struct TripView: View {
 #endif
             // MARK: - View updates
             .getSize($size)
-#if DEBUG
-            .onAppear {
-                Task {
-                    await createData()
-                }
-            }
-#endif
         }
     }
 
@@ -116,7 +118,7 @@ struct TripView: View {
     @MainActor
     func createData() async {
         // swiftlint:disable:next force_try
-//        try! modelContext.delete(model: Trip.self)
+        try! modelContext.delete(model: Trip.self)
         await SampleDataGenerator.generateSampleData(modelContext: modelContext)
     }
 #endif
