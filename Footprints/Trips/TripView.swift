@@ -101,6 +101,11 @@ struct TripView: View {
                         }
                     }
                 }
+                ToolbarItem {
+                    Button("Clear") {
+                        deleteData()
+                    }
+                }
 #endif
             }
             .sheet(isPresented: $isAddTripViewPresented) {
@@ -117,9 +122,12 @@ struct TripView: View {
 #if DEBUG
     @MainActor
     func createData() async {
-        // swiftlint:disable:next force_try
-        try! modelContext.delete(model: Trip.self)
+        deleteData()
         await SampleDataGenerator.generateSampleData(modelContext: modelContext)
+    }
+
+    func deleteData() {
+        try? modelContext.delete(model: Trip.self)
     }
 #endif
 }
@@ -129,3 +137,6 @@ struct TripView: View {
         .modelContainer(SampleModelContainer.sample())
         .environmentObject(NavigationController.preview)
 }
+
+@MainActor
+extension CommandLine { }

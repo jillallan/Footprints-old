@@ -13,7 +13,7 @@ struct AddTripView: View {
     @EnvironmentObject var navigationController: NavigationController
 
     // MARK: - Data Properties
-    @Bindable var trip = Trip()
+    @Bindable var trip = Trip(title: "")
 
     // MARK: - Computed Properties
     var saveDisabled: Bool {

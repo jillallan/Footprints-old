@@ -10,10 +10,12 @@ import XCTest
 final class TripViewUITests: XCTestCase {
     var app: XCUIApplication!
     var device: XCUIDevice!
+    var tripHelper: TripUITestHelper!
 
     override func setUpWithError() throws {
         app = XCUIApplication()
         device = XCUIDevice.shared
+        tripHelper = TripUITestHelper()
         #if !os(macOS)
         device.orientation = .portrait
         #endif
@@ -26,8 +28,37 @@ final class TripViewUITests: XCTestCase {
         try app.performAccessibilityAudit()
     }
 
+    func testTripView_whenAddTripButtonTapped_BringsUpAddTripSheet() {
+        let addTripButton = app.buttons["Add Trip"]
+
+        XCTAssert(addTripButton.isHittable)
+        addTripButton.tap()
+
+        let addTripNavigationTitle = app.navigationBars.staticTexts["Add Trip"]
+        XCTAssert(addTripNavigationTitle.exists)
+    }    
+
+    func testTripView_WhenTripSwipedAndDeleted_DeletesTrip() {
+//        testAddTripView_whenNewTripAddedAndBackButtonPressd_IncreasesTripCount()
+        let trips = app.collectionViews.element(boundBy: 0).cells
+        XCTAssertEqual(trips.count, 1)
+
+        trips.element(boundBy: 0).swipeLeft()
+        print(app.debugDescription)
+
+        let deleteButton = app.buttons["Delete"]
+        if deleteButton.waitForExistence(timeout: 2) {
+            XCTAssert(deleteButton.isHittable)
+            deleteButton.tap()
+
+            XCTAssertEqual(trips.count, 0)
+        }
+    }
+
     func testTripView_AddingATrip_ShowsNewTripinTripDetailView() {
-        
+        let tripHelper = TripUITestHelper()
+        tripHelper.addTripTitle(app: app, title: "")
+
         let tripButton = app
             .scrollViews
             .otherElements
@@ -49,7 +80,7 @@ final class TripViewUITests: XCTestCase {
         XCTAssert(tripTitleTextField.isHittable)
         tripTitleTextField.tap()
 
-        tripTitleTextField.clearAndEnterText(text: "New Title")
+        tripTitleTextField.clearAndTypeText(text: "New Title")
 
         let saveButton = app
             .navigationBars

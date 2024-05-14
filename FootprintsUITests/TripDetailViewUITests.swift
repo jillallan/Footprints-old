@@ -9,21 +9,62 @@ import XCTest
 
 final class TripDetailViewUITests: XCTestCase {
 
+    var app: XCUIApplication!
+    var device: XCUIDevice!
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        app = XCUIApplication()
+        device = XCUIDevice.shared
+        #if !os(macOS)
+        device.orientation = .portrait
+        #endif
+        app.launch()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testAccessibility() throws {
+        continueAfterFailure = true
+        try app.performAccessibilityAudit()
     }
 
     func testTripDetailView_EditingATrip_NewDetailsShowInTripDetailView() throws {
+        let tripButton = app
+            .scrollViews
+            .otherElements
+            .buttons
+            .element(boundBy: 0)
+        XCTAssert(tripButton.isHittable)
+        tripButton.tap()
 
+        let editButton = app
+            .navigationBars
+            .element(boundBy: 0)
+            .buttons["Edit"]
+        XCTAssert(editButton.isHittable)
+        editButton.tap()
+
+        let tripTitleTextField = app
+            .collectionViews
+            .textFields["Name your trip"]
+        XCTAssert(tripTitleTextField.isHittable)
+        tripTitleTextField.tap()
+
+        tripTitleTextField.clearAndTypeText(text: "New Title")
+
+        let saveButton = app
+            .navigationBars
+            .element(boundBy: 0)
+            .buttons["Save"]
+        XCTAssert(saveButton.isHittable)
+        saveButton.tap()
+
+//        let tripsButton = app
+//            .navigationBars.element(boundBy: 0).buttons["Trips"]
+//        XCTAssert(tripsButton.isHittable)
+//        tripsButton.tap()
+
+        let tripTitle = app.navigationBars["New Title"]
+        XCTAssert(tripTitle.exists)
     }
 
     func testTripDetailView_EditingATrip_NewDetailsShowInTripView() throws {
