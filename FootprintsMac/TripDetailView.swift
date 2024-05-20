@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct TripDetailView: View {
+    @Bindable var trip: Trip
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
     }
 }
 
-#Preview {
-    TripDetailView()
+#Preview("Standard") {
+    DataPreview {
+        NavigationStack {
+            TripDetailView(trip: .bedminsterToBeijing)
+        }
+    } modelContainer: {
+        SampleModelContainer.sample()
+    }
+}
+
+#Preview("Editing title") {
+    DataPreview {
+        NavigationStack {
+            TripDetailView(trip: .bedminsterToBeijing)
+        }
+    } modelContainer: {
+        SampleModelContainer.sample()
+    }
 }

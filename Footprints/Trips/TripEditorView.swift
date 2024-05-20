@@ -60,7 +60,9 @@ struct TripEditorView: View {
 
             // MARK: - Navigation
             .navigationTitle(isNew ? "Add Trip" : "Edit Trip")
+#if !os(macOS)
             .navigationBarTitleDisplayMode(.inline)
+#endif
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {

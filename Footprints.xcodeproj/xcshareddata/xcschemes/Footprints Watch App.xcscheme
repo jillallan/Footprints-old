@@ -44,11 +44,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Footprints Watch App.xctestplan"
+            reference = "container:watchOSTestPlan.xctestplan"
             default = "YES">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:TestPlanWatch.xctestplan">
          </TestPlanReference>
       </TestPlans>
       <Testables>
