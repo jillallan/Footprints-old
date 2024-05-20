@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EditTripFormLargeText: View {
+struct TripEditorFormLargeText: View {
     @Bindable var trip: Trip
     @Binding var isAutoTrackingToggleDisabled: Bool
 
@@ -46,7 +46,7 @@ struct EditTripFormLargeText: View {
 #Preview {
     DataPreview {
         NavigationStack {
-            EditTripForm(trip: .bedminsterToBeijing, isAutoTrackingToggleDisabled: .constant(false))
+            TripEditorForm(trip: .bedminsterToBeijing, isAutoTrackingToggleDisabled: .constant(false))
         }
     } modelContainer: {
         SampleModelContainer.sample()

@@ -24,7 +24,13 @@
         }
       }
     },
+    "Clear" : {
+
+    },
     "Edit" : {
+
+    },
+    "Edit Trip" : {
 
     },
     "Enable automatic trip tracking" : {

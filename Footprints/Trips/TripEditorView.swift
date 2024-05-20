@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EditTripView: View {
+struct TripEditorView: View {
     @Environment(\.sizeCategory) private var sizeCategory
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
@@ -41,12 +41,12 @@ struct EditTripView: View {
         NavigationStack {
             Form {
                 if sizeCategory.isAccessibilityCategory {
-                    EditTripFormLargeText(
+                    TripEditorFormLargeText(
                         trip: tempTrip ?? trip,
                         isAutoTrackingToggleDisabled: $isAutoTrackingToggleDisabled
                     )
                 } else {
-                    EditTripForm(
+                    TripEditorForm(
                         trip: tempTrip ?? trip,
                         isAutoTrackingToggleDisabled: $isAutoTrackingToggleDisabled
                     )
@@ -116,7 +116,7 @@ struct EditTripView: View {
 #Preview("iOS existing trip") {
     DataPreview {
         NavigationStack {
-            EditTripView(trip: .anglesey)
+            TripEditorView(trip: .anglesey)
         }
     } modelContainer: {
         SampleModelContainer.sample()
@@ -126,7 +126,7 @@ struct EditTripView: View {
 #Preview("iOS new trip") {
     DataPreview {
         NavigationStack {
-            EditTripView(isNew: true)
+            TripEditorView(isNew: true)
 
         }
     } modelContainer: {

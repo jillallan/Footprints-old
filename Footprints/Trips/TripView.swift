@@ -109,7 +109,7 @@ struct TripView: View {
 #endif
             }
             .sheet(isPresented: $isAddTripViewPresented) {
-                AddTripView()
+                TripEditorView(isNew: true)
             }
 #if !os(macOS)
             .toolbarBackground(.hidden, for: .navigationBar)

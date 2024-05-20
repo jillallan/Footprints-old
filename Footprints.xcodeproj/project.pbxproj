@@ -15,10 +15,8 @@
 		78091CE52BE902AB001CB204 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CE42BE902AB001CB204 /* TripDetailView.swift */; };
 		78091CE72BE90EBB001CB204 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CE62BE90EBB001CB204 /* TrailingIconLabelStyle.swift */; };
 		78091CEB2BE91738001CB204 /* GreyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CEA2BE91738001CB204 /* GreyButton.swift */; };
-		78091CEF2BE92C42001CB204 /* EditTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CEE2BE92C42001CB204 /* EditTripView.swift */; };
-		78091CF12BE933CE001CB204 /* EditTripForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF02BE933CE001CB204 /* EditTripForm.swift */; };
-		78091CF32BE942F2001CB204 /* EditTripFormLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF22BE942F2001CB204 /* EditTripFormLargeText.swift */; };
-		78091CF52BEA4996001CB204 /* EditTripFormHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF42BEA4996001CB204 /* EditTripFormHost.swift */; };
+		78091CF12BE933CE001CB204 /* TripEditorForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF02BE933CE001CB204 /* TripEditorForm.swift */; };
+		78091CF32BE942F2001CB204 /* TripEditorFormLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF22BE942F2001CB204 /* TripEditorFormLargeText.swift */; };
 		78091CF92BF24672001CB204 /* TripDetailViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78091CF82BF24672001CB204 /* TripDetailViewUITests.swift */; };
 		78119F242BE568B700A556EE /* GetSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806765E2BE563B60056FAD1 /* GetSizeModifier.swift */; };
 		78119F272BE5722900A556EE /* OSLog+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F262BE5722900A556EE /* OSLog+Extension.swift */; };
@@ -26,7 +24,6 @@
 		78119F2A2BE6631B00A556EE /* TripCardLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F292BE6631B00A556EE /* TripCardLargeText.swift */; };
 		78119F2B2BE6650600A556EE /* TripCardLargeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F292BE6631B00A556EE /* TripCardLargeText.swift */; };
 		78119F2D2BE6688E00A556EE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 78119F2C2BE6688E00A556EE /* Localizable.xcstrings */; };
-		78119F2F2BE6746600A556EE /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F2E2BE6746600A556EE /* AddTripView.swift */; };
 		78119F312BE6865500A556EE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F302BE6865500A556EE /* NavigationController.swift */; };
 		78119F332BE6887400A556EE /* PersistanceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F322BE6887400A556EE /* PersistanceHandler.swift */; };
 		78119F352BE68BF200A556EE /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F342BE68BF200A556EE /* TripView.swift */; };
@@ -48,6 +45,17 @@
 		7867289C2BCD85A400D21CF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */; };
 		7867289F2BCD85A400D21CF5 /* Footprints Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 786728922BCD85A300D21CF5 /* Footprints Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		786728A42BCD8DA700D21CF5 /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */; };
+		7876EF142BFA4B300066F838 /* TripEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF132BFA4B300066F838 /* TripEditorView.swift */; };
+		7876EF1E2BFB94090066F838 /* FootprintsMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF1D2BFB94090066F838 /* FootprintsMacApp.swift */; };
+		7876EF202BFB94090066F838 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF1F2BFB94090066F838 /* ContentView.swift */; };
+		7876EF222BFB940B0066F838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7876EF212BFB940B0066F838 /* Assets.xcassets */; };
+		7876EF252BFB940B0066F838 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7876EF242BFB940B0066F838 /* Preview Assets.xcassets */; };
+		7876EF302BFB940B0066F838 /* FootprintsMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF2F2BFB940B0066F838 /* FootprintsMacTests.swift */; };
+		7876EF3A2BFB940B0066F838 /* FootprintsMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF392BFB940B0066F838 /* FootprintsMacUITests.swift */; };
+		7876EF3C2BFB940B0066F838 /* FootprintsMacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF3B2BFB940B0066F838 /* FootprintsMacUITestsLaunchTests.swift */; };
+		7876EF4D2BFB94A30066F838 /* FootprintsWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF4C2BFB94A30066F838 /* FootprintsWatchTests.swift */; };
+		7876EF5A2BFB94B60066F838 /* FootprintsWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF592BFB94B60066F838 /* FootprintsWatchUITests.swift */; };
+		7876EF5C2BFB94B60066F838 /* FootprintsWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF5B2BFB94B60066F838 /* FootprintsWatchUITestsLaunchTests.swift */; };
 		78774F672BE79D9A00903128 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78774F662BE79D9A00903128 /* TripView.swift */; };
 		78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC52BCED19700CA8776 /* Trip-SampleData.swift */; };
 		78BB2EC82BCED9AC00CA8776 /* SampleModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB2EC72BCED9AC00CA8776 /* SampleModelContainer.swift */; };
@@ -110,6 +118,34 @@
 			remoteGlobalIDString = 786728912BCD85A300D21CF5;
 			remoteInfo = "FootprintsWatch Watch App";
 		};
+		7876EF2C2BFB940B0066F838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E216F52BCD4E5E000C08F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7876EF1A2BFB94090066F838;
+			remoteInfo = FootprintsMac;
+		};
+		7876EF362BFB940B0066F838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E216F52BCD4E5E000C08F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7876EF1A2BFB94090066F838;
+			remoteInfo = FootprintsMac;
+		};
+		7876EF4E2BFB94A30066F838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E216F52BCD4E5E000C08F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 786728912BCD85A300D21CF5;
+			remoteInfo = "Footprints Watch App";
+		};
+		7876EF5D2BFB94B60066F838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E216F52BCD4E5E000C08F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 786728912BCD85A300D21CF5;
+			remoteInfo = "Footprints Watch App";
+		};
 		78E217162BCD4E7E000C08F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78E216F52BCD4E5E000C08F9 /* Project object */;
@@ -140,15 +176,12 @@
 		78091CE42BE902AB001CB204 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		78091CE62BE90EBB001CB204 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		78091CEA2BE91738001CB204 /* GreyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreyButton.swift; sourceTree = "<group>"; };
-		78091CEE2BE92C42001CB204 /* EditTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripView.swift; sourceTree = "<group>"; };
-		78091CF02BE933CE001CB204 /* EditTripForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripForm.swift; sourceTree = "<group>"; };
-		78091CF22BE942F2001CB204 /* EditTripFormLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripFormLargeText.swift; sourceTree = "<group>"; };
-		78091CF42BEA4996001CB204 /* EditTripFormHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTripFormHost.swift; sourceTree = "<group>"; };
+		78091CF02BE933CE001CB204 /* TripEditorForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditorForm.swift; sourceTree = "<group>"; };
+		78091CF22BE942F2001CB204 /* TripEditorFormLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditorFormLargeText.swift; sourceTree = "<group>"; };
 		78091CF82BF24672001CB204 /* TripDetailViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewUITests.swift; sourceTree = "<group>"; };
 		78119F262BE5722900A556EE /* OSLog+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Extension.swift"; sourceTree = "<group>"; };
 		78119F292BE6631B00A556EE /* TripCardLargeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardLargeText.swift; sourceTree = "<group>"; };
 		78119F2C2BE6688E00A556EE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		78119F2E2BE6746600A556EE /* AddTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
 		78119F302BE6865500A556EE /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		78119F322BE6887400A556EE /* PersistanceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHandler.swift; sourceTree = "<group>"; };
 		78119F342BE68BF200A556EE /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
@@ -162,6 +195,25 @@
 		786728982BCD85A400D21CF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7867289B2BCD85A400D21CF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
+		7876EF132BFA4B300066F838 /* TripEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditorView.swift; sourceTree = "<group>"; };
+		7876EF1B2BFB94090066F838 /* FootprintsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootprintsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7876EF1D2BFB94090066F838 /* FootprintsMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsMacApp.swift; sourceTree = "<group>"; };
+		7876EF1F2BFB94090066F838 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7876EF212BFB940B0066F838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7876EF242BFB940B0066F838 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7876EF262BFB940B0066F838 /* FootprintsMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FootprintsMac.entitlements; sourceTree = "<group>"; };
+		7876EF2B2BFB940B0066F838 /* FootprintsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7876EF2F2BFB940B0066F838 /* FootprintsMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsMacTests.swift; sourceTree = "<group>"; };
+		7876EF352BFB940B0066F838 /* FootprintsMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7876EF392BFB940B0066F838 /* FootprintsMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsMacUITests.swift; sourceTree = "<group>"; };
+		7876EF3B2BFB940B0066F838 /* FootprintsMacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsMacUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7876EF4A2BFB94A30066F838 /* FootprintsWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7876EF4C2BFB94A30066F838 /* FootprintsWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsWatchTests.swift; sourceTree = "<group>"; };
+		7876EF572BFB94B60066F838 /* FootprintsWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootprintsWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7876EF592BFB94B60066F838 /* FootprintsWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsWatchUITests.swift; sourceTree = "<group>"; };
+		7876EF5B2BFB94B60066F838 /* FootprintsWatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsWatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7876EF622BFB95E30066F838 /* Footprints Watch App.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Footprints Watch App.xctestplan"; sourceTree = "<group>"; };
+		7876EF632BFB964F0066F838 /* TestPlanWatch.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlanWatch.xctestplan; sourceTree = "<group>"; };
 		78774F662BE79D9A00903128 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		78BB2EC52BCED19700CA8776 /* Trip-SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip-SampleData.swift"; sourceTree = "<group>"; };
 		78BB2EC72BCED9AC00CA8776 /* SampleModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModelContainer.swift; sourceTree = "<group>"; };
@@ -215,6 +267,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7876EF182BFB94090066F838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF282BFB940B0066F838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF322BFB940B0066F838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF472BFB94A30066F838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF542BFB94B60066F838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E216FA2BCD4E5E000C08F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,18 +328,6 @@
 			path = Containers;
 			sourceTree = "<group>";
 		};
-		78091CF62BEA4B80001CB204 /* TripEditing */ = {
-			isa = PBXGroup;
-			children = (
-				78119F2E2BE6746600A556EE /* AddTripView.swift */,
-				78091CEE2BE92C42001CB204 /* EditTripView.swift */,
-				78091CF42BEA4996001CB204 /* EditTripFormHost.swift */,
-				78091CF02BE933CE001CB204 /* EditTripForm.swift */,
-				78091CF22BE942F2001CB204 /* EditTripFormLargeText.swift */,
-			);
-			path = TripEditing;
-			sourceTree = "<group>";
-		};
 		78091CF72BEA4B96001CB204 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,15 +348,14 @@
 		786728472BCD852700D21CF5 /* FootprintsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */,
 				78CDF6032BCDCD69001F6466 /* FootprintsUITests.swift */,
 				786728A32BCD8DA700D21CF5 /* NavigationUITests.swift */,
 				7861FA992BE25AFC00342C61 /* TripViewUITests.swift */,
-				78F1F7822BF3A7E0003562E9 /* AddTripViewUITests.swift */,
-				78F1F7722BF3A1A1003562E9 /* TripUITestHelper.swift */,
-				78F1F7742BF3A1F8003562E9 /* CalendarUITestPicker.swift */,
 				78091CF82BF24672001CB204 /* TripDetailViewUITests.swift */,
-				7867284A2BCD852700D21CF5 /* FootprintsUITestsLaunchTests.swift */,
-				78F1F7702BF2B2AE003562E9 /* XCUIElement+Extension.swift */,
+				78F1F7822BF3A7E0003562E9 /* AddTripViewUITests.swift */,
+				7876EF152BFB87AE0066F838 /* UITestHelpers */,
+				7876EF162BFB87E10066F838 /* UITestExtensions */,
 			);
 			path = FootprintsUITests;
 			sourceTree = "<group>";
@@ -305,15 +379,88 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7876EF152BFB87AE0066F838 /* UITestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				78F1F7722BF3A1A1003562E9 /* TripUITestHelper.swift */,
+				78F1F7742BF3A1F8003562E9 /* CalendarUITestPicker.swift */,
+			);
+			path = UITestHelpers;
+			sourceTree = "<group>";
+		};
+		7876EF162BFB87E10066F838 /* UITestExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				78F1F7702BF2B2AE003562E9 /* XCUIElement+Extension.swift */,
+			);
+			path = UITestExtensions;
+			sourceTree = "<group>";
+		};
+		7876EF1C2BFB94090066F838 /* FootprintsMac */ = {
+			isa = PBXGroup;
+			children = (
+				7876EF1D2BFB94090066F838 /* FootprintsMacApp.swift */,
+				7876EF1F2BFB94090066F838 /* ContentView.swift */,
+				7876EF212BFB940B0066F838 /* Assets.xcassets */,
+				7876EF262BFB940B0066F838 /* FootprintsMac.entitlements */,
+				7876EF232BFB940B0066F838 /* Preview Content */,
+			);
+			path = FootprintsMac;
+			sourceTree = "<group>";
+		};
+		7876EF232BFB940B0066F838 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7876EF242BFB940B0066F838 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7876EF2E2BFB940B0066F838 /* FootprintsMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				7876EF2F2BFB940B0066F838 /* FootprintsMacTests.swift */,
+			);
+			path = FootprintsMacTests;
+			sourceTree = "<group>";
+		};
+		7876EF382BFB940B0066F838 /* FootprintsMacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7876EF392BFB940B0066F838 /* FootprintsMacUITests.swift */,
+				7876EF3B2BFB940B0066F838 /* FootprintsMacUITestsLaunchTests.swift */,
+			);
+			path = FootprintsMacUITests;
+			sourceTree = "<group>";
+		};
+		7876EF4B2BFB94A30066F838 /* FootprintsWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				7876EF4C2BFB94A30066F838 /* FootprintsWatchTests.swift */,
+			);
+			path = FootprintsWatchTests;
+			sourceTree = "<group>";
+		};
+		7876EF582BFB94B60066F838 /* FootprintsWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7876EF592BFB94B60066F838 /* FootprintsWatchUITests.swift */,
+				7876EF5B2BFB94B60066F838 /* FootprintsWatchUITestsLaunchTests.swift */,
+			);
+			path = FootprintsWatchUITests;
+			sourceTree = "<group>";
+		};
 		78BB2ED52BCF0FBF00CA8776 /* Trips */ = {
 			isa = PBXGroup;
 			children = (
 				78CDF6072BCDDD93001F6466 /* Trip.swift */,
-				78BB2ED72BCF175E00CA8776 /* TripCard.swift */,
 				78774F662BE79D9A00903128 /* TripView.swift */,
 				78119F292BE6631B00A556EE /* TripCardLargeText.swift */,
+				78BB2ED72BCF175E00CA8776 /* TripCard.swift */,
 				78091CE42BE902AB001CB204 /* TripDetailView.swift */,
-				78091CF62BEA4B80001CB204 /* TripEditing */,
+				7876EF132BFA4B300066F838 /* TripEditorView.swift */,
+				78091CF02BE933CE001CB204 /* TripEditorForm.swift */,
+				78091CF22BE942F2001CB204 /* TripEditorFormLargeText.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -345,13 +492,20 @@
 		78E216F42BCD4E5E000C08F9 = {
 			isa = PBXGroup;
 			children = (
-				78BB2EDD2BD1253400CA8776 /* README.md */,
+				7876EF632BFB964F0066F838 /* TestPlanWatch.xctestplan */,
+				7876EF622BFB95E30066F838 /* Footprints Watch App.xctestplan */,
 				78BB2ED12BCEFED600CA8776 /* Footprints.xctestplan */,
+				78BB2EDD2BD1253400CA8776 /* README.md */,
 				78119F2C2BE6688E00A556EE /* Localizable.xcstrings */,
 				78E216FF2BCD4E5E000C08F9 /* Footprints */,
+				786728932BCD85A300D21CF5 /* Footprints Watch App */,
+				7876EF1C2BFB94090066F838 /* FootprintsMac */,
 				78E217132BCD4E7E000C08F9 /* FootprintsTests */,
 				786728472BCD852700D21CF5 /* FootprintsUITests */,
-				786728932BCD85A300D21CF5 /* Footprints Watch App */,
+				7876EF2E2BFB940B0066F838 /* FootprintsMacTests */,
+				7876EF382BFB940B0066F838 /* FootprintsMacUITests */,
+				7876EF4B2BFB94A30066F838 /* FootprintsWatchTests */,
+				7876EF582BFB94B60066F838 /* FootprintsWatchUITests */,
 				78E216FE2BCD4E5E000C08F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -363,6 +517,11 @@
 				78E217122BCD4E7E000C08F9 /* FootprintsTests.xctest */,
 				786728462BCD852700D21CF5 /* FootprintsUITests.xctest */,
 				786728922BCD85A300D21CF5 /* Footprints Watch App.app */,
+				7876EF1B2BFB94090066F838 /* FootprintsMac.app */,
+				7876EF2B2BFB940B0066F838 /* FootprintsMacTests.xctest */,
+				7876EF352BFB940B0066F838 /* FootprintsMacUITests.xctest */,
+				7876EF4A2BFB94A30066F838 /* FootprintsWatchTests.xctest */,
+				7876EF572BFB94B60066F838 /* FootprintsWatchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -452,6 +611,95 @@
 			productReference = 786728922BCD85A300D21CF5 /* Footprints Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7876EF1A2BFB94090066F838 /* FootprintsMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7876EF3D2BFB940B0066F838 /* Build configuration list for PBXNativeTarget "FootprintsMac" */;
+			buildPhases = (
+				7876EF172BFB94090066F838 /* Sources */,
+				7876EF182BFB94090066F838 /* Frameworks */,
+				7876EF192BFB94090066F838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FootprintsMac;
+			productName = FootprintsMac;
+			productReference = 7876EF1B2BFB94090066F838 /* FootprintsMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7876EF2A2BFB940B0066F838 /* FootprintsMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7876EF402BFB940B0066F838 /* Build configuration list for PBXNativeTarget "FootprintsMacTests" */;
+			buildPhases = (
+				7876EF272BFB940B0066F838 /* Sources */,
+				7876EF282BFB940B0066F838 /* Frameworks */,
+				7876EF292BFB940B0066F838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7876EF2D2BFB940B0066F838 /* PBXTargetDependency */,
+			);
+			name = FootprintsMacTests;
+			productName = FootprintsMacTests;
+			productReference = 7876EF2B2BFB940B0066F838 /* FootprintsMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7876EF342BFB940B0066F838 /* FootprintsMacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7876EF432BFB940B0066F838 /* Build configuration list for PBXNativeTarget "FootprintsMacUITests" */;
+			buildPhases = (
+				7876EF312BFB940B0066F838 /* Sources */,
+				7876EF322BFB940B0066F838 /* Frameworks */,
+				7876EF332BFB940B0066F838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7876EF372BFB940B0066F838 /* PBXTargetDependency */,
+			);
+			name = FootprintsMacUITests;
+			productName = FootprintsMacUITests;
+			productReference = 7876EF352BFB940B0066F838 /* FootprintsMacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7876EF492BFB94A30066F838 /* FootprintsWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7876EF502BFB94A30066F838 /* Build configuration list for PBXNativeTarget "FootprintsWatchTests" */;
+			buildPhases = (
+				7876EF462BFB94A30066F838 /* Sources */,
+				7876EF472BFB94A30066F838 /* Frameworks */,
+				7876EF482BFB94A30066F838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7876EF4F2BFB94A30066F838 /* PBXTargetDependency */,
+			);
+			name = FootprintsWatchTests;
+			productName = FootprintsWatchTests;
+			productReference = 7876EF4A2BFB94A30066F838 /* FootprintsWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7876EF562BFB94B60066F838 /* FootprintsWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7876EF5F2BFB94B60066F838 /* Build configuration list for PBXNativeTarget "FootprintsWatchUITests" */;
+			buildPhases = (
+				7876EF532BFB94B60066F838 /* Sources */,
+				7876EF542BFB94B60066F838 /* Frameworks */,
+				7876EF552BFB94B60066F838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7876EF5E2BFB94B60066F838 /* PBXTargetDependency */,
+			);
+			name = FootprintsWatchUITests;
+			productName = FootprintsWatchUITests;
+			productReference = 7876EF572BFB94B60066F838 /* FootprintsWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		78E216FC2BCD4E5E000C08F9 /* Footprints */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78E2170B2BCD4E5F000C08F9 /* Build configuration list for PBXNativeTarget "Footprints" */;
@@ -497,7 +745,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					786728452BCD852700D21CF5 = {
@@ -506,6 +754,25 @@
 					};
 					786728912BCD85A300D21CF5 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					7876EF1A2BFB94090066F838 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					7876EF2A2BFB940B0066F838 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 7876EF1A2BFB94090066F838;
+					};
+					7876EF342BFB940B0066F838 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 7876EF1A2BFB94090066F838;
+					};
+					7876EF492BFB94A30066F838 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 786728912BCD85A300D21CF5;
+					};
+					7876EF562BFB94B60066F838 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 786728912BCD85A300D21CF5;
 					};
 					78E216FC2BCD4E5E000C08F9 = {
 						CreatedOnToolsVersion = 15.3;
@@ -534,6 +801,11 @@
 				78E217112BCD4E7E000C08F9 /* FootprintsTests */,
 				786728452BCD852700D21CF5 /* FootprintsUITests */,
 				786728912BCD85A300D21CF5 /* Footprints Watch App */,
+				7876EF1A2BFB94090066F838 /* FootprintsMac */,
+				7876EF2A2BFB940B0066F838 /* FootprintsMacTests */,
+				7876EF342BFB940B0066F838 /* FootprintsMacUITests */,
+				7876EF492BFB94A30066F838 /* FootprintsWatchTests */,
+				7876EF562BFB94B60066F838 /* FootprintsWatchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -554,6 +826,43 @@
 				78BB2F0C2BD1A4B600CA8776 /* Preview Assets.xcassets in Resources */,
 				785BD92A2BE6A5A6006DF738 /* Localizable.xcstrings in Resources */,
 				786728992BCD85A400D21CF5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF192BFB94090066F838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7876EF252BFB940B0066F838 /* Preview Assets.xcassets in Resources */,
+				7876EF222BFB940B0066F838 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF292BFB940B0066F838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF332BFB940B0066F838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF482BFB94A30066F838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF552BFB94B60066F838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,17 +958,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7876EF172BFB94090066F838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7876EF202BFB94090066F838 /* ContentView.swift in Sources */,
+				7876EF1E2BFB94090066F838 /* FootprintsMacApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF272BFB940B0066F838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7876EF302BFB940B0066F838 /* FootprintsMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF312BFB940B0066F838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7876EF3C2BFB940B0066F838 /* FootprintsMacUITestsLaunchTests.swift in Sources */,
+				7876EF3A2BFB940B0066F838 /* FootprintsMacUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF462BFB94A30066F838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7876EF4D2BFB94A30066F838 /* FootprintsWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7876EF532BFB94B60066F838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7876EF5C2BFB94B60066F838 /* FootprintsWatchUITestsLaunchTests.swift in Sources */,
+				7876EF5A2BFB94B60066F838 /* FootprintsWatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E216F92BCD4E5E000C08F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78119F2F2BE6746600A556EE /* AddTripView.swift in Sources */,
 				78119F312BE6865500A556EE /* NavigationController.swift in Sources */,
 				78CDF6082BCDDD93001F6466 /* Trip.swift in Sources */,
 				78BB2EC82BCED9AC00CA8776 /* SampleModelContainer.swift in Sources */,
 				78091CE72BE90EBB001CB204 /* TrailingIconLabelStyle.swift in Sources */,
 				78119F2A2BE6631B00A556EE /* TripCardLargeText.swift in Sources */,
-				78091CF12BE933CE001CB204 /* EditTripForm.swift in Sources */,
+				78091CF12BE933CE001CB204 /* TripEditorForm.swift in Sources */,
 				78BB2EDA2BD0209E00CA8776 /* DataPreview.swift in Sources */,
 				78F1F77F2BF3A4C9003562E9 /* String+Extension.swift in Sources */,
 				7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */,
@@ -669,15 +1020,14 @@
 				78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */,
 				78119F332BE6887400A556EE /* PersistanceHandler.swift in Sources */,
 				78BB2ECA2BCED9FD00CA8776 /* SampleDataGenerator.swift in Sources */,
-				78091CF52BEA4996001CB204 /* EditTripFormHost.swift in Sources */,
+				7876EF142BFA4B300066F838 /* TripEditorView.swift in Sources */,
 				78024F192BDBD4B2002BC7AC /* DynamicGridContainer.swift in Sources */,
 				78091CEB2BE91738001CB204 /* GreyButton.swift in Sources */,
 				78CDF5F52BCDB536001F6466 /* AppDetailColumn.swift in Sources */,
 				78E217012BCD4E5E000C08F9 /* FootprintsApp.swift in Sources */,
 				78F1F7792BF3A2BC003562E9 /* DateFormatter+Extension.swift in Sources */,
 				78091CE52BE902AB001CB204 /* TripDetailView.swift in Sources */,
-				78091CF32BE942F2001CB204 /* EditTripFormLargeText.swift in Sources */,
-				78091CEF2BE92C42001CB204 /* EditTripView.swift in Sources */,
+				78091CF32BE942F2001CB204 /* TripEditorFormLargeText.swift in Sources */,
 				78CDF5F32BCDB52A001F6466 /* AppSidebarList.swift in Sources */,
 				78BB2ED82BCF175E00CA8776 /* TripCard.swift in Sources */,
 				78BB2EDC2BD121DF00CA8776 /* Footprints.docc in Sources */,
@@ -718,6 +1068,26 @@
 			platformFilter = ios;
 			target = 786728912BCD85A300D21CF5 /* Footprints Watch App */;
 			targetProxy = 7867289D2BCD85A400D21CF5 /* PBXContainerItemProxy */;
+		};
+		7876EF2D2BFB940B0066F838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7876EF1A2BFB94090066F838 /* FootprintsMac */;
+			targetProxy = 7876EF2C2BFB940B0066F838 /* PBXContainerItemProxy */;
+		};
+		7876EF372BFB940B0066F838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7876EF1A2BFB94090066F838 /* FootprintsMac */;
+			targetProxy = 7876EF362BFB940B0066F838 /* PBXContainerItemProxy */;
+		};
+		7876EF4F2BFB94A30066F838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 786728912BCD85A300D21CF5 /* Footprints Watch App */;
+			targetProxy = 7876EF4E2BFB94A30066F838 /* PBXContainerItemProxy */;
+		};
+		7876EF5E2BFB94B60066F838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 786728912BCD85A300D21CF5 /* Footprints Watch App */;
+			targetProxy = 7876EF5D2BFB94B60066F838 /* PBXContainerItemProxy */;
 		};
 		78E217172BCD4E7E000C08F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -796,7 +1166,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Debug;
 		};
@@ -827,7 +1197,221 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		7876EF3E2BFB940B0066F838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FootprintsMac/FootprintsMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FootprintsMac/Preview Content\"";
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7876EF3F2BFB940B0066F838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FootprintsMac/FootprintsMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FootprintsMac/Preview Content\"";
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7876EF412BFB940B0066F838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootprintsMac.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FootprintsMac";
+			};
+			name = Debug;
+		};
+		7876EF422BFB940B0066F838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootprintsMac.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FootprintsMac";
+			};
+			name = Release;
+		};
+		7876EF442BFB940B0066F838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = FootprintsMac;
+			};
+			name = Debug;
+		};
+		7876EF452BFB940B0066F838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = FootprintsMac;
+			};
+			name = Release;
+		};
+		7876EF512BFB94A30066F838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Footprints Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Footprints Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		7876EF522BFB94A30066F838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Footprints Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Footprints Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		7876EF602BFB94B60066F838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Footprints Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		7876EF612BFB94B60066F838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJT6W9JA72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jillallan.FootprintsWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Footprints Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};
@@ -1083,6 +1667,51 @@
 			buildConfigurations = (
 				786728A12BCD85A400D21CF5 /* Debug */,
 				786728A22BCD85A400D21CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7876EF3D2BFB940B0066F838 /* Build configuration list for PBXNativeTarget "FootprintsMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7876EF3E2BFB940B0066F838 /* Debug */,
+				7876EF3F2BFB940B0066F838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7876EF402BFB940B0066F838 /* Build configuration list for PBXNativeTarget "FootprintsMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7876EF412BFB940B0066F838 /* Debug */,
+				7876EF422BFB940B0066F838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7876EF432BFB940B0066F838 /* Build configuration list for PBXNativeTarget "FootprintsMacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7876EF442BFB940B0066F838 /* Debug */,
+				7876EF452BFB940B0066F838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7876EF502BFB94A30066F838 /* Build configuration list for PBXNativeTarget "FootprintsWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7876EF512BFB94A30066F838 /* Debug */,
+				7876EF522BFB94A30066F838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7876EF5F2BFB94B60066F838 /* Build configuration list for PBXNativeTarget "FootprintsWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7876EF602BFB94B60066F838 /* Debug */,
+				7876EF612BFB94B60066F838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

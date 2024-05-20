@@ -41,7 +41,7 @@ struct TripDetailView: View {
                 }
             }
             .sheet(isPresented: $isEditViewPresented) {
-                EditTripView(trip: trip)
+                TripEditorView(trip: trip)
             }
 
             .navigationTitle(trip.title)

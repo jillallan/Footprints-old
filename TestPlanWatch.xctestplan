@@ -12,7 +12,20 @@
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
-
+    {
+      "target" : {
+        "containerPath" : "container:Footprints.xcodeproj",
+        "identifier" : "78E217112BCD4E7E000C08F9",
+        "name" : "FootprintsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Footprints.xcodeproj",
+        "identifier" : "7876EF562BFB94B60066F838",
+        "name" : "FootprintsWatchUITests"
+      }
+    }
   ],
   "version" : 1
 }
