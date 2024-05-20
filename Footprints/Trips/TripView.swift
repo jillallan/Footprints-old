@@ -78,6 +78,7 @@ struct TripView: View {
                                 TripCard(trip: trip)
                             }
                         }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding(.horizontal, padding)
