@@ -57,6 +57,7 @@
 		785BA3952BFB9C250002D8BC /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA3942BFB9C250002D8BC /* TripDetailView.swift */; };
 		785BA3962BFB9C930002D8BC /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
 		785BA3972BFB9CBC0002D8BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */; };
+		785BA39C2BFBF4E00002D8BC /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA39B2BFBF4E00002D8BC /* Step.swift */; };
 		785BD92A2BE6A5A6006DF738 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 78119F2C2BE6688E00A556EE /* Localizable.xcstrings */; };
 		785BD92B2BE6A5AD006DF738 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F302BE6865500A556EE /* NavigationController.swift */; };
 		785BD92C2BE6A5D1006DF738 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */; };
@@ -212,6 +213,7 @@
 		78119F322BE6887400A556EE /* PersistanceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHandler.swift; sourceTree = "<group>"; };
 		78119F342BE68BF200A556EE /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		785BA3942BFB9C250002D8BC /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
+		785BA39B2BFBF4E00002D8BC /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		7861FA992BE25AFC00342C61 /* TripViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewUITests.swift; sourceTree = "<group>"; };
 		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
@@ -376,6 +378,14 @@
 				78119F322BE6887400A556EE /* PersistanceHandler.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		785BA39A2BFBF4D00002D8BC /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				785BA39B2BFBF4E00002D8BC /* Step.swift */,
+			);
+			path = Steps;
 			sourceTree = "<group>";
 		};
 		786728472BCD852700D21CF5 /* FootprintsUITests */ = {
@@ -569,6 +579,7 @@
 				78024F1A2BDBD4B7002BC7AC /* Containers */,
 				78CDF5ED2BCDB267001F6466 /* Navigation */,
 				78BB2ED52BCF0FBF00CA8776 /* Trips */,
+				785BA39A2BFBF4D00002D8BC /* Steps */,
 				78CDF5F82BCDB67F001F6466 /* Extensions */,
 				78E217062BCD4E5F000C08F9 /* Preview Content */,
 				78BB2EDB2BD121DF00CA8776 /* Footprints.docc */,
@@ -1072,6 +1083,7 @@
 				7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */,
 				78E217032BCD4E5E000C08F9 /* ContentView.swift in Sources */,
 				78CDF5F72BCDB595001F6466 /* View+Extension.swift in Sources */,
+				785BA39C2BFBF4E00002D8BC /* Step.swift in Sources */,
 				78774F672BE79D9A00903128 /* TripView.swift in Sources */,
 				78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */,
 				78119F332BE6887400A556EE /* PersistanceHandler.swift in Sources */,
