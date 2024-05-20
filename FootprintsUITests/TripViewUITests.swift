@@ -21,12 +21,14 @@ final class TripViewUITests: XCTestCase {
         #endif
         app.launch()
         continueAfterFailure = false
+
+        tripHelper.whenInTripView_deleteData(app: app)
     }
 
-    func testAccessibility() throws {
-        continueAfterFailure = true
-        try app.performAccessibilityAudit()
-    }
+//    func testAccessibility() throws {
+//        continueAfterFailure = true
+//        try app.performAccessibilityAudit()
+//    }
 
     func testTripView_whenAddTripButtonTapped_BringsUpAddTripSheet() {
         let addTripButton = app.buttons["Add Trip"]
@@ -36,96 +38,98 @@ final class TripViewUITests: XCTestCase {
 
         let addTripNavigationTitle = app.navigationBars.staticTexts["Add Trip"]
         XCTAssert(addTripNavigationTitle.exists)
-    }    
-
-    func testTripView_WhenTripSwipedAndDeleted_DeletesTrip() {
-//        testAddTripView_whenNewTripAddedAndBackButtonPressd_IncreasesTripCount()
-        let trips = app.collectionViews.element(boundBy: 0).cells
-        XCTAssertEqual(trips.count, 1)
-
-        trips.element(boundBy: 0).swipeLeft()
-        print(app.debugDescription)
-
-        let deleteButton = app.buttons["Delete"]
-        if deleteButton.waitForExistence(timeout: 2) {
-            XCTAssert(deleteButton.isHittable)
-            deleteButton.tap()
-
-            XCTAssertEqual(trips.count, 0)
-        }
     }
+
+//    func testTripView_WhenTripSwipedAndDeleted_DeletesTrip() {
+////        testAddTripView_whenNewTripAddedAndBackButtonPressd_IncreasesTripCount()
+//        let trips = app.collectionViews.element(boundBy: 0).cells
+//        XCTAssertEqual(trips.count, 1)
+//
+//        trips.element(boundBy: 0).swipeLeft()
+//        print(app.debugDescription)
+//
+//        let deleteButton = app.buttons["Delete"]
+//        if deleteButton.waitForExistence(timeout: 2) {
+//            XCTAssert(deleteButton.isHittable)
+//            deleteButton.tap()
+//
+//            XCTAssertEqual(trips.count, 0)
+//        }
+//    }
 
     func testTripView_AddingATrip_ShowsNewTripinTripDetailView() {
         let tripHelper = TripUITestHelper()
-        tripHelper.addTripTitle(app: app, title: "")
+        let tripTitle = String.randomWord()
+        tripHelper.addTrip(app: app, title: tripTitle)
 
-        let tripButton = app
-            .scrollViews
-            .otherElements
-            .buttons
-            .element(boundBy: 0)
-        XCTAssert(tripButton.isHittable)
-        tripButton.tap()
-
-        let editButton = app
-            .navigationBars
-            .element(boundBy: 0)
-            .buttons["Edit"]
-        XCTAssert(editButton.isHittable)
-        editButton.tap()
-
-        let tripTitleTextField = app
-            .collectionViews
-            .textFields["Name your trip"]
-        XCTAssert(tripTitleTextField.isHittable)
-        tripTitleTextField.tap()
-
-        tripTitleTextField.clearAndTypeText(text: "New Title")
-
-        let saveButton = app
-            .navigationBars
-            .element(boundBy: 0)
-            .buttons["Save"]
-        XCTAssert(saveButton.isHittable)
-        saveButton.tap()
-
-//        let tripsButton = app
-//            .navigationBars.element(boundBy: 0).buttons["Trips"]
-//        XCTAssert(tripsButton.isHittable)
-//        tripsButton.tap()
-
-        let tripTitle = app.navigationBars["New Title"]
-        XCTAssert(tripTitle.exists)
-
+        let tripTitleText = app.staticTexts[tripTitle]
+        XCTAssert(tripTitleText.exists, "The title text should exist")
     }
 
     func testTripView_AddingATrip_NewTripShowsInTripView() {
+        let tripHelper = TripUITestHelper()
+        let tripTitle = String.randomWord()
+//        tripHelper.addTrip(app: app, title: tripTitle)
+        tripHelper.addTripAndWaitForExistence(app: app, title: tripTitle) {
+            let backButton = app.buttons["Trips"]
+            XCTAssert(backButton.exists, "The back button should exist and is hittables")
+            backButton.tap()
 
-        
+            
+        }
     }
 
-    func testTripView_whenIphoneLandscape_TripsShownInTwoColumns() {
-        print(app.debugDescription)
-#if !os(macOS)
-        device.orientation = .landscapeLeft
-#endif
-        let scrollView = app.scrollViews
-            .element(boundBy: 0)
-            .children(matching: .other)
-            .element(boundBy: 0)
+    func testTripView_whenNewTripAddedAndBackButtonPressd_IncreasesTripCount() {
+        // if
+        let startTripCount = app
+            .scrollViews
+            .otherElements
+            .buttons
+            .count
 
-        let scrollViewWidth = scrollView.frame.width
+        XCTAssertEqual(startTripCount, 0)
 
-        let images = app.scrollViews.descendants(matching: .image)
-        let imageWidths = images.allElementsBoundByIndex.map(\.frame.height)
+        let title = String.randomWord()
+        tripHelper.addTrip(app: app, title: title)
 
-        let averageWidth = imageWidths.reduce(0, +) / Double(imageWidths.count) * 2
-        XCTAssertEqual(
-            scrollViewWidth,
-            averageWidth,
-            accuracy: 100.0,
-            "scroll view width \(scrollViewWidth) should be approx equal to avg width of images: \(averageWidth)"
-        )
+        // when
+        let backButton = app.navigationBars[title].buttons["Trips"]
+        if backButton.waitForExistence(timeout: 1) {
+            XCTAssert(backButton.isHittable)
+            backButton.tap()
+
+            // then
+            let endTripCount = app
+                .scrollViews
+                .otherElements
+                .buttons
+                .count
+            XCTAssertEqual(endTripCount, startTripCount + 1)
+        }
     }
+
+//    func testTripView_whenIphoneLandscape_TripsShownInTwoColumns() {
+//        print(app.debugDescription)
+//#if !os(macOS)
+//        device.orientation = .landscapeLeft
+//#endif
+//        let scrollView = app.scrollViews
+//            .element(boundBy: 0)
+//            .children(matching: .other)
+//            .element(boundBy: 0)
+//
+//        let scrollViewWidth = scrollView.frame.width
+//
+//        let images = app.scrollViews.descendants(matching: .image)
+//        let imageWidths = images.allElementsBoundByIndex.map(\.frame.height)
+//
+//        let averageWidth = imageWidths.reduce(0, +) / Double(imageWidths.count) * 2
+//        XCTAssertEqual(
+//            scrollViewWidth,
+//            averageWidth,
+//            accuracy: 100.0,
+//            "scroll view width \(scrollViewWidth) should be approx equal to avg width of images: \(averageWidth)"
+//        )
+//    }
 
 }

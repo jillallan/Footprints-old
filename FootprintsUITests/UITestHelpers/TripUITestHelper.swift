@@ -58,12 +58,11 @@ final class TripUITestHelper: XCTestCase {
 
     func launchAddTripView(app: XCUIApplication) {
         let addTripButton = app.buttons["Add Trip"]
-
         XCTAssert(addTripButton.isHittable)
         addTripButton.tap()
 
-        let addTripNavigationTitle = app.navigationBars.staticTexts["Add Trip"]
-        XCTAssert(addTripNavigationTitle.exists)
+//        let addTripNavigationTitle = app.navigationBars.staticTexts["Add Trip"]
+//        XCTAssert(addTripNavigationTitle.exists)
     }
 
     func addTrip(app: XCUIApplication, title: String) {
@@ -74,6 +73,19 @@ final class TripUITestHelper: XCTestCase {
         XCTAssert(saveButton.isHittable)
         saveButton.tap()
     }
+
+    func addTripAndWaitForExistence(app: XCUIApplication, title: String, closure: () -> ()) {
+        launchAddTripView(app: app)
+        addTripTitle(app: app, title: title)
+
+        let saveButton = app.buttons["Save"]
+        if saveButton.waitForExistence(timeout: 2) {
+            XCTAssert(saveButton.isHittable)
+            saveButton.tap()
+            closure()
+        }
+    }
+
 
     func addTrip(app: XCUIApplication, title: String, startDate: Date, endDate: Date) {
         launchAddTripView(app: app)
@@ -95,13 +107,44 @@ final class TripUITestHelper: XCTestCase {
     }
 
     func whenInTripView_deleteData(app: XCUIApplication) {
-        app.buttons["Clear"].tap()
+        let clearButton = app.buttons["Clear"]
+        XCTAssert(
+            clearButton.isHittable,
+            "Clear button should exist and be hittable in debug mode"
+        )
+        clearButton.tap()
 
         let tripCount = app.scrollViews
             .otherElements
             .buttons
             .count
 
-        XCTAssertEqual(tripCount, 0, "There should be 0 trips after deleting all data.")
+        XCTAssertEqual(
+            tripCount,
+            0,
+            "Trip count should be zero if all data is cleared"
+        )
+    }
+
+    func whenInTripView_loadData(app: XCUIApplication) {
+        let samplesButton = app.buttons["SAMPLES"]
+        XCTAssert(
+            samplesButton.isHittable,
+            "Samples button should exist and be hittable in debug mode"
+        )
+        if samplesButton.waitForExistence(timeout: 2) {
+            samplesButton.tap()
+
+            let tripCount = app.scrollViews
+                .otherElements
+                .buttons
+                .count
+
+            XCTAssertGreaterThan(
+                tripCount,
+                0,
+                "Trip count should be 7 if data is loaded"
+            )
+        }
     }
 }

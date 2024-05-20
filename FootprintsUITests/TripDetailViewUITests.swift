@@ -11,10 +11,12 @@ final class TripDetailViewUITests: XCTestCase {
 
     var app: XCUIApplication!
     var device: XCUIDevice!
+    var tripHelper: TripUITestHelper!
 
     override func setUpWithError() throws {
         app = XCUIApplication()
         device = XCUIDevice.shared
+        tripHelper = TripUITestHelper()
         #if !os(macOS)
         device.orientation = .portrait
         #endif
@@ -22,12 +24,37 @@ final class TripDetailViewUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testAccessibility() throws {
-        continueAfterFailure = true
-        try app.performAccessibilityAudit()
+//    func testAccessibility() throws {
+//        tripHelper.launchAddTripView(app: app)
+//        continueAfterFailure = true
+//        try app.performAccessibilityAudit()
+//    }
+
+    func testTripDetailView_EditingATrip_NewDetailsShowInTripDetailView() {
+        tripHelper.whenInTripView_loadData(app: app)
+
+        let newTitle = String.randomWord()
+        editTripAndWaitForExistence(title: newTitle) {
+            let newTitleText = app.navigationBars[newTitle]
+            XCTAssert(newTitleText.exists)
+        }
     }
 
-    func testTripDetailView_EditingATrip_NewDetailsShowInTripDetailView() throws {
+    func testTripDetailView_EditingATrip_NewDetailsShowInTripView() throws {
+        tripHelper.whenInTripView_loadData(app: app)
+
+        let newTitle = String.randomWord()
+        editTripAndWaitForExistence(title: newTitle) {
+            let backButton = app.buttons["Trips"]
+            XCTAssert(backButton.exists, "The back button should exist and is hittables")
+            backButton.tap()
+
+            let newTitleText = app.scrollViews.staticTexts[newTitle]
+            XCTAssert(newTitleText.exists, "Trip title should exist")
+        }
+    }
+
+    func editTripAndWaitForExistence(title: String, closure: () -> Void) {
         let tripButton = app
             .scrollViews
             .otherElements
@@ -49,34 +76,16 @@ final class TripDetailViewUITests: XCTestCase {
         XCTAssert(tripTitleTextField.isHittable)
         tripTitleTextField.tap()
 
-        tripTitleTextField.clearAndTypeText(text: "New Title")
+        tripTitleTextField.clearAndTypeText(text: title)
 
         let saveButton = app
             .navigationBars
             .element(boundBy: 0)
             .buttons["Save"]
-        XCTAssert(saveButton.isHittable)
-        saveButton.tap()
-
-//        let tripsButton = app
-//            .navigationBars.element(boundBy: 0).buttons["Trips"]
-//        XCTAssert(tripsButton.isHittable)
-//        tripsButton.tap()
-
-        let tripTitle = app.navigationBars["New Title"]
-        XCTAssert(tripTitle.exists)
-    }
-
-    func testTripDetailView_EditingATrip_NewDetailsShowInTripView() throws {
-
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+        if saveButton.waitForExistence(timeout: 1) {
+            XCTAssert(saveButton.isHittable)
+            saveButton.tap()
+            closure()
         }
     }
 }

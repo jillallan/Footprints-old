@@ -22,6 +22,8 @@ final class AddTripViewUITests: XCTestCase {
         #endif
         app.launch()
         continueAfterFailure = false
+
+        tripHelper.whenInTripView_deleteData(app: app)
     }
 
     func testAddTripView_whenNoTitleEntered_saveButtonIsDisabled() {
@@ -102,38 +104,5 @@ final class AddTripViewUITests: XCTestCase {
         XCTAssert(app.staticTexts[title].exists)
 
         tripHelper.whenTripDetailView_returnToTripView(app: app)
-        tripHelper.whenInTripView_deleteData(app: app)
-    }
-
-    func testAddTripView_whenNewTripAddedAndBackButtonPressd_IncreasesTripCount() {
-        // if
-
-        print(app.debugDescription)
-        let startTripCount = app
-            .scrollViews
-            .otherElements
-            .buttons
-            .count
-
-        XCTAssertEqual(startTripCount, 0)
-
-        let title = String.randomWord()
-        tripHelper.addTrip(app: app, title: title)
-
-        // when
-        let backButton = app.navigationBars[title].buttons["Trips"]
-        if backButton.waitForExistence(timeout: 1) {
-            XCTAssert(backButton.isHittable)
-            backButton.tap()
-
-            // then
-            let endTripCount = app
-                .scrollViews
-                .otherElements
-                .buttons
-                .count
-            XCTAssertEqual(endTripCount, startTripCount + 1)
-        }
-        tripHelper.whenInTripView_deleteData(app: app)
     }
 }
