@@ -37,7 +37,6 @@ final class Step {
         self.altitude = altitude
     }
 
-
     /// Initializes a new instance of a Step, with a default altitude of 0.0
     /// - Parameters:
     ///   - timestamp: The time of the step, the defualt is the current time
@@ -46,7 +45,6 @@ final class Step {
     convenience init(timestamp: Date = .now, latitude: Double, longitude: Double) {
         self.init(timestamp: timestamp, latitude: latitude, longitude: longitude, altitude: 0.0)
     }
-
 
     /// Initializes a new instance of a Step, with a default latitude, longtiude and altitude of 0.0
     ///   - timestamp: The time of the step, the defualt is the current time

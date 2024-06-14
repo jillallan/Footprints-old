@@ -108,13 +108,14 @@ final class DateExtensionTests: XCTestCase {
 
         // then
         XCTAssertGreaterThanOrEqual(
-            randomDate, 
-            endDate, 
+            randomDate,
+            endDate,
             "Random date: \(randomDate), should be greater than or equal to end date: \(endDate)"
         )
+
         XCTAssertLessThanOrEqual(
-            randomDate, 
-            startDate, 
+            randomDate,
+            startDate,
             "Random date: \(randomDate), should be less than or equal to start date: \(startDate)"
         )
     }

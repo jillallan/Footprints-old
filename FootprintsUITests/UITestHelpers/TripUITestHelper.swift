@@ -74,7 +74,7 @@ final class TripUITestHelper: XCTestCase {
         saveButton.tap()
     }
 
-    func addTripAndWaitForExistence(app: XCUIApplication, title: String, closure: () -> ()) {
+    func addTripAndWaitForExistence(app: XCUIApplication, title: String, closure: () -> Void) {
         launchAddTripView(app: app)
         addTripTitle(app: app, title: title)
 
@@ -85,7 +85,6 @@ final class TripUITestHelper: XCTestCase {
             closure()
         }
     }
-
 
     func addTrip(app: XCUIApplication, title: String, startDate: Date, endDate: Date) {
         launchAddTripView(app: app)

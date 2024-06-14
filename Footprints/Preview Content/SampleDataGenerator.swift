@@ -28,10 +28,15 @@ struct SampleDataGenerator {
         modelContext.insert(Step.bedminsterStation)
         modelContext.insert(Step.templeMeads)
         modelContext.insert(Step.paddington)
+        modelContext.insert(Step.stPancras)
+        modelContext.insert(Step.Ixelles)
 
-        Step.bedminsterStation.trip = Trip.bedminsterToBeijing
-        Step.templeMeads.trip = Trip.bedminsterToBeijing
-        Step.paddington.trip = Trip.bedminsterToBeijing
+        Trip.bedminsterToBeijing.steps.append(Step.bedminsterStation)
+        Trip.bedminsterToBeijing.steps.append(Step.templeMeads)
+        Trip.bedminsterToBeijing.steps.append(Step.paddington)
+        Trip.bedminsterToBeijing.steps.append(Step.stPancras)
+        Trip.bedminsterToBeijing.steps.append(Step.Ixelles)
+
     }
 
     /// A random image to display in trip view

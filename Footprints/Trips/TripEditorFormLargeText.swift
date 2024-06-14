@@ -37,6 +37,7 @@ struct TripEditorFormLargeText: View {
             Text("Enable automatic trip tracking")
 //                } footer: {
 //                    if locationHandler.locationUpdatesAuthorized == 1 {
+            // swiftlint:disable:next line_length
 //                        Text("Auto tracking is disabled as location services have been turned off for this app.  Go to iPhone settings to enable")
 //                    }
         }

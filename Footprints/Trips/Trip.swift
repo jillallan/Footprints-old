@@ -26,6 +26,9 @@ final class Trip: CustomDebugStringConvertible {
     /// Has the user enabled auto tracking using location services for this trip
     var isAutoTrackingOn: Bool
 
+    var steps = [Step]()
+
+
     // MARK: - Computed Properties
 
     /// Required property for CustomDebugStringConvertible protocol

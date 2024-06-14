@@ -33,7 +33,6 @@ final class AddTripViewUITests: XCTestCase {
         XCTAssert(saveButton.isHittable)
         XCTAssert(!saveButton.isEnabled)
 
-        
     }
 
     func testAddTripView_whenTitleEntered_saveButtonIsEnabled() {

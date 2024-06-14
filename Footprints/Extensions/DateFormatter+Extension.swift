@@ -49,12 +49,12 @@ extension DateFormatter {
     }()
 
     static let year: DateFormatter = {
-        let df = DateFormatter()
+        let dateFormatter = DateFormatter()
         let localeIdentifier = NSLocale.current.identifier
-        df.locale = Locale(identifier: localeIdentifier)
-        df.setLocalizedDateFormatFromTemplate("yyyy")
-        df.locale = Locale.autoupdatingCurrent
+        dateFormatter.locale = Locale(identifier: localeIdentifier)
+        dateFormatter.setLocalizedDateFormatFromTemplate("yyyy")
+        dateFormatter.locale = Locale.autoupdatingCurrent
 
-        return df
+        return dateFormatter
     }()
 }

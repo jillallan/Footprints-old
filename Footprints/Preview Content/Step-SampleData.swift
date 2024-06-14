@@ -31,4 +31,20 @@ extension Step {
         latitude: 51.517431,
         longitude: -0.178055
     )
+
+    @MainActor
+    /// A sample step
+    static let stPancras = Step(
+        timestamp: Date.from(string: "2016/07/28 12:00:00"),
+        latitude: 51.529969,
+        longitude: -0.126060
+    )
+
+    @MainActor
+    /// A sample step
+    static let Ixelles = Step(
+        timestamp: Date.from(string: "2016/07/28 16:18:00"),
+        latitude: 50.838023,
+        longitude: 4.373529
+    )
 }

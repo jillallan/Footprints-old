@@ -75,7 +75,6 @@ final class TripViewUITests: XCTestCase {
             XCTAssert(backButton.exists, "The back button should exist and is hittables")
             backButton.tap()
 
-            
         }
     }
 
@@ -110,9 +109,9 @@ final class TripViewUITests: XCTestCase {
 
 //    func testTripView_whenIphoneLandscape_TripsShownInTwoColumns() {
 //        print(app.debugDescription)
-//#if !os(macOS)
+// #if !os(macOS)
 //        device.orientation = .landscapeLeft
-//#endif
+// #endif
 //        let scrollView = app.scrollViews
 //            .element(boundBy: 0)
 //            .children(matching: .other)

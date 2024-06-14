@@ -21,7 +21,7 @@ extension NavigationController {
     // Decorated with nonisolated(unsafe) as this
     // is only for previews
 //    nonisolated(unsafe)
-    static var preview: NavigationController = {
+    nonisolated(unsafe) static var preview: NavigationController = {
         NavigationController()
     }()
 }

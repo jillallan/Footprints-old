@@ -8,7 +8,11 @@
 import Foundation
 
 extension String {
-    static func randomWord(length range: ClosedRange<Int> = 5...10, includeDigits: Bool = true, includeCapitals: Bool = true) -> String {
+    static func randomWord(
+        length range: ClosedRange<Int> = 5...10,
+        includeDigits: Bool = true,
+        includeCapitals: Bool = true
+    ) -> String {
         let length = Int.random(in: range)
         var letters = ""
         if includeDigits && includeCapitals {
@@ -21,7 +25,7 @@ extension String {
             letters = "abcdefghijklmnopqrstuvwxyz"
         }
 
-        return String((0..<length).map{ _ in letters.randomElement()! })
+        return String((0..<length).map { _ in letters.randomElement()! })
     }
 
     static func randomSentence() -> String {

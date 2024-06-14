@@ -44,7 +44,7 @@ final class DateFormatterExtensionTests: XCTestCase {
 
     func test_dateFromString_withDefaultFormat_ReturnsDate() throws {
 
-        //dateComponents.timeZone = TimeZone(abbreviation: "GMT") // Japan Standard Time
+        // dateComponents.timeZone = TimeZone(abbreviation: "GMT") // Japan Standard Time
         // when
         let dateString = String(
             format: "%04d-%02d-%02d %02d:%02d:%02d",

@@ -15,7 +15,6 @@ struct TripDetailView: View {
 
     var body: some View {
         Map()
-        
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Edit") {

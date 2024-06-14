@@ -40,7 +40,7 @@ extension Date {
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
-    
+
     /// Creates a date from a string
     /// - Parameters:
     ///   - string: A date represented by a string
