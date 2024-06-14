@@ -57,6 +57,12 @@
 		785BA3952BFB9C250002D8BC /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA3942BFB9C250002D8BC /* TripDetailView.swift */; };
 		785BA3962BFB9C930002D8BC /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
 		785BA3972BFB9CBC0002D8BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E217072BCD4E5F000C08F9 /* Preview Assets.xcassets */; };
+		785BA39C2BFBF4E00002D8BC /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA39B2BFBF4E00002D8BC /* Step.swift */; };
+		785BA39E2BFBFC6F0002D8BC /* Step-SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA39D2BFBFC6F0002D8BC /* Step-SampleData.swift */; };
+		785BA39F2BFBFDEB0002D8BC /* Step-SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA39D2BFBFC6F0002D8BC /* Step-SampleData.swift */; };
+		785BA3A02BFBFDEC0002D8BC /* Step-SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA39D2BFBFC6F0002D8BC /* Step-SampleData.swift */; };
+		785BA3A12BFBFDF90002D8BC /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA39B2BFBF4E00002D8BC /* Step.swift */; };
+		785BA3A22BFBFDFA0002D8BC /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BA39B2BFBF4E00002D8BC /* Step.swift */; };
 		785BD92A2BE6A5A6006DF738 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 78119F2C2BE6688E00A556EE /* Localizable.xcstrings */; };
 		785BD92B2BE6A5AD006DF738 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78119F302BE6865500A556EE /* NavigationController.swift */; };
 		785BD92C2BE6A5D1006DF738 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5F02BCDB2A1001F6466 /* AppScreen.swift */; };
@@ -212,6 +218,8 @@
 		78119F322BE6887400A556EE /* PersistanceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHandler.swift; sourceTree = "<group>"; };
 		78119F342BE68BF200A556EE /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		785BA3942BFB9C250002D8BC /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
+		785BA39B2BFBF4E00002D8BC /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		785BA39D2BFBFC6F0002D8BC /* Step-SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Step-SampleData.swift"; sourceTree = "<group>"; };
 		7861FA992BE25AFC00342C61 /* TripViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewUITests.swift; sourceTree = "<group>"; };
 		7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Extension.swift"; sourceTree = "<group>"; };
 		7867278C2BCD571A00D21CF5 /* EnvironmentValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValueTests.swift; sourceTree = "<group>"; };
@@ -376,6 +384,14 @@
 				78119F322BE6887400A556EE /* PersistanceHandler.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		785BA39A2BFBF4D00002D8BC /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				785BA39B2BFBF4E00002D8BC /* Step.swift */,
+			);
+			path = Steps;
 			sourceTree = "<group>";
 		};
 		786728472BCD852700D21CF5 /* FootprintsUITests */ = {
@@ -569,6 +585,7 @@
 				78024F1A2BDBD4B7002BC7AC /* Containers */,
 				78CDF5ED2BCDB267001F6466 /* Navigation */,
 				78BB2ED52BCF0FBF00CA8776 /* Trips */,
+				785BA39A2BFBF4D00002D8BC /* Steps */,
 				78CDF5F82BCDB67F001F6466 /* Extensions */,
 				78E217062BCD4E5F000C08F9 /* Preview Content */,
 				78BB2EDB2BD121DF00CA8776 /* Footprints.docc */,
@@ -580,6 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				78BB2EC52BCED19700CA8776 /* Trip-SampleData.swift */,
+				785BA39D2BFBFC6F0002D8BC /* Step-SampleData.swift */,
 				78BB2ED92BD0209E00CA8776 /* DataPreview.swift */,
 				78BB2EC72BCED9AC00CA8776 /* SampleModelContainer.swift */,
 				78BB2EC92BCED9FD00CA8776 /* SampleDataGenerator.swift */,
@@ -973,6 +991,7 @@
 				78119F2B2BE6650600A556EE /* TripCardLargeText.swift in Sources */,
 				78BB2F072BD1A47200CA8776 /* Trip-SampleData.swift in Sources */,
 				78119F282BE5731B00A556EE /* OSLog+Extension.swift in Sources */,
+				785BA3A12BFBFDF90002D8BC /* Step.swift in Sources */,
 				78BB2F082BD1A47200CA8776 /* SampleModelContainer.swift in Sources */,
 				78BB2F0A2BD1A47D00CA8776 /* Date+Extension.swift in Sources */,
 				785BD9312BE6A608006DF738 /* Footprints.docc in Sources */,
@@ -986,6 +1005,7 @@
 				78024F1E2BDBE2A0002BC7AC /* View+Extension.swift in Sources */,
 				78BB2F052BD1A44200CA8776 /* TripCard.swift in Sources */,
 				785BD92F2BE6A5D8006DF738 /* AppDetailColumn.swift in Sources */,
+				785BA39F2BFBFDEB0002D8BC /* Step-SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,6 +1018,7 @@
 				785BA37C2BFB9B7C0002D8BC /* OSLog+Extension.swift in Sources */,
 				785BA3902BFB9BEF0002D8BC /* TripEditorFormLargeText.swift in Sources */,
 				785BA3892BFB9BBC0002D8BC /* TripCard.swift in Sources */,
+				785BA3A02BFBFDEC0002D8BC /* Step-SampleData.swift in Sources */,
 				785BA37B2BFB9B780002D8BC /* EnvironmentValues+Extension.swift in Sources */,
 				785BA3882BFB9BB90002D8BC /* TripCardLargeText.swift in Sources */,
 				785BA38A2BFB9BC20002D8BC /* AppScreen.swift in Sources */,
@@ -1010,6 +1031,7 @@
 				785BA3842BFB9B910002D8BC /* SampleDataGenerator.swift in Sources */,
 				785BA3782BFB9AA70002D8BC /* FootprintsApp.swift in Sources */,
 				785BA3952BFB9C250002D8BC /* TripDetailView.swift in Sources */,
+				785BA3A22BFBFDFA0002D8BC /* Step.swift in Sources */,
 				785BA38C2BFB9BCC0002D8BC /* AppDetailColumn.swift in Sources */,
 				785BA38D2BFB9BCC0002D8BC /* AppSidebarList.swift in Sources */,
 				785BA37A2BFB9B510002D8BC /* ContentView.swift in Sources */,
@@ -1072,9 +1094,11 @@
 				7867278B2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift in Sources */,
 				78E217032BCD4E5E000C08F9 /* ContentView.swift in Sources */,
 				78CDF5F72BCDB595001F6466 /* View+Extension.swift in Sources */,
+				785BA39C2BFBF4E00002D8BC /* Step.swift in Sources */,
 				78774F672BE79D9A00903128 /* TripView.swift in Sources */,
 				78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */,
 				78119F332BE6887400A556EE /* PersistanceHandler.swift in Sources */,
+				785BA39E2BFBFC6F0002D8BC /* Step-SampleData.swift in Sources */,
 				78BB2ECA2BCED9FD00CA8776 /* SampleDataGenerator.swift in Sources */,
 				7876EF142BFA4B300066F838 /* TripEditorView.swift in Sources */,
 				78024F192BDBD4B2002BC7AC /* DynamicGridContainer.swift in Sources */,
