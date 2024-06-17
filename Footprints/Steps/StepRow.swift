@@ -11,8 +11,17 @@ struct StepRow: View {
     let step: Step
 
     var body: some View {
-        VStack {
-            Text(step.timestamp.formatted(date: .abbreviated, time: .shortened))
+        HStack {
+            Image(systemName: "car")
+                .frame(width: 40, height: 40)
+                .clipShape(Circle())
+                .overlay {
+                    Circle().stroke(.indigo, lineWidth: 2)
+                }
+            VStack {
+                Text(step.timestamp.formatted(date: .abbreviated, time: .shortened))
+            }
+            Spacer()
         }
     }
 }

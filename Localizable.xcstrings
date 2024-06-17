@@ -4,6 +4,12 @@
     "" : {
 
     },
+    "Add step" : {
+
+    },
+    "Add Step" : {
+
+    },
     "Add Trip" : {
       "localizations" : {
         "es" : {
@@ -25,6 +31,9 @@
       }
     },
     "Clear" : {
+
+    },
+    "Date" : {
 
     },
     "Edit" : {
@@ -63,6 +72,9 @@
         }
       }
     },
+    "Location Search" : {
+
+    },
     "Name your trip" : {
 
     },
@@ -94,6 +106,9 @@
           }
         }
       }
+    },
+    "This item is %lld" : {
+
     },
     "Trip Title" : {
 

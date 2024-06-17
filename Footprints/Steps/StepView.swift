@@ -13,15 +13,25 @@ struct StepView: View {
     var body: some View {
         List {
             ForEach(trip.steps) { step in
-                StepRow(step: step)
+                NavigationLink(value: step) {
+                    StepRow(step: step)
+                }
+
             }
+            Text("Add step")
         }
+        .navigationDestination(for: Step.self) { step in
+            StepDetailView(step: step)
+        }
+        .listStyle(.plain)
     }
 }
 
 #Preview {
     DataPreview {
-        StepView(trip: .bedminsterToBeijing)
+        NavigationStack{
+            StepView(trip: .bedminsterToBeijing)
+        }
     } modelContainer: {
         SampleModelContainer.sample()
     }

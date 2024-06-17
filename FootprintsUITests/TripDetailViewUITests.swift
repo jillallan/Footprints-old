@@ -54,6 +54,10 @@ final class TripDetailViewUITests: XCTestCase {
         }
     }
 
+    func testExample() {
+        
+    }
+
     func editTripAndWaitForExistence(title: String, closure: () -> Void) {
         let tripButton = app
             .scrollViews

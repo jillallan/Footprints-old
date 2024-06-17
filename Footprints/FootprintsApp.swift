@@ -10,10 +10,10 @@ import SwiftUI
 @main
 struct FootprintsApp: App {
     @StateObject var navigationController = NavigationController()
+    @State private var locationHandler = LocationHandler()
 
     var body: some Scene {
         WindowGroup {
-//            TestScrollView()
             ContentView()
                 .environmentObject(navigationController)
                 .macOS { view in
@@ -22,5 +22,6 @@ struct FootprintsApp: App {
                 }
         }
         .modelContainer(for: [Trip.self], isUndoEnabled: true)
+        .environment(locationHandler)
     }
 }

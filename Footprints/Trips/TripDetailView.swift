@@ -10,28 +10,16 @@ import SwiftUI
 
 struct TripDetailView: View {
     @Environment(\.modelContext) var modelContext
+    @Environment(LocationHandler.self) private var locationHandler
     @Bindable var trip: Trip
     @State private var isEditViewPresented: Bool = false
+    @State private var isAddStepViewPresented: Bool = false
 
     var body: some View {
-        Map()
+        TripMap(trip: trip)
             .safeAreaInset(edge: .bottom) {
-                ScrollView(.horizontal) {
-                    LazyVGrid(
-                        columns: [GridItem(.flexible(minimum: 100, maximum: 300), spacing: 10.0)],
-                        spacing: 10.0
-                    ) {
-                        Image(SampleDataGenerator.randomTripImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                            .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .circular))
-                            .iOS { $0.aspectRatio(1.5, contentMode: .fill) }
-                            .macOS { $0.aspectRatio(1.0, contentMode: .fill) }
-                            .watchOS { $0.aspectRatio(1.9, contentMode: .fill) }
-                            .containerRelativeFrame(.horizontal)
-                    }
-                }
+                StepView(trip: trip)
+                    .frame(height: 300)
             }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -43,7 +31,40 @@ struct TripDetailView: View {
             .sheet(isPresented: $isEditViewPresented) {
                 TripEditorView(trip: trip)
             }
+            .sheet(isPresented: $isAddStepViewPresented) {
 
+                StepDetailView(step: Step(timestamp: Date.now)) //, isNewStep: true)
+            }
+            .overlay {
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button("Add Step", systemImage: "plus") {
+                            Task {
+
+                                do {
+                                    try await locationHandler.getCurrentLocation()
+                                } catch {
+
+                                }
+
+                            }
+                            isAddStepViewPresented.toggle()
+
+                        }
+                        .font(.largeTitle)
+                        .labelStyle(.iconOnly)
+                        .frame(width: 80, height: 80)
+                        .background(Color.indigo)
+                        .foregroundStyle(Color.white)
+                        .clipShape(Circle())
+                        .padding()
+
+                    }
+                }
+                .ignoresSafeArea()
+            }
             .navigationTitle(trip.title)
 #if os(iOS)
             .navigationBarTitleDisplayMode(.large)
@@ -57,6 +78,16 @@ struct TripDetailView: View {
     DataPreview {
         NavigationStack {
             TripDetailView(trip: .bedminsterToBeijing)
+        }
+    } modelContainer: {
+        SampleModelContainer.sample()
+    }
+}
+
+#Preview("No steps") {
+    DataPreview {
+        NavigationStack {
+            TripDetailView(trip: .anglesey)
         }
     } modelContainer: {
         SampleModelContainer.sample()

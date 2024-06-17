@@ -5,6 +5,8 @@
 //  Created by Jill Allan on 20/05/2024.
 //
 
+import CoreLocation
+import MapKit
 import SwiftData
 import SwiftUI
 
@@ -22,6 +24,14 @@ final class Step {
         Step on: \(timestamp.formatted(date: .abbreviated, time: .shortened)), \
         latitude: \(latitude), longitude: \(longitude), altitude: \(altitude))
         """
+    }
+
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+
+    var region: MKCoordinateRegion {
+        MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan.sample)
     }
 
     /// Initializes a new instance of a Step
