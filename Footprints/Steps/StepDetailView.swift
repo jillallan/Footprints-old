@@ -30,7 +30,9 @@ struct StepDetailView: View {
                 .resizable()
                 .scaledToFit()
         }
+        
         .sheet(isPresented: $isLocationEditorViewPresented) {
+
             LocationEditorView(step: step)
         }
     }
