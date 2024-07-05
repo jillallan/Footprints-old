@@ -35,13 +35,7 @@ struct LocationSearchView: View {
                 .searchSuggestions {
                     ForEach(locationSearchService.completions) { completion in
                         Button {
-                            if completion.subtitle == "Search Nearby" {
-                                isSearchResultViewPresented.toggle()
-                            } else {
-                                selectedCompletion = completion
-                            }
-                            searchDetents = .medium
-                            logger.info("location suggestion selected")
+                            showSelectedCompletionDetails(completion: completion)
                         } label: {
                             HStack {
                                 VStack(alignment: .leading) {
@@ -77,7 +71,6 @@ struct LocationSearchView: View {
                     }
                     .presentationDetents([.medium])
                 }
-
 #endif
                 .navigationTitle("Location Search")
         }
@@ -91,6 +84,15 @@ struct LocationSearchView: View {
         } catch {
 //            logger.error("Failed to fetch search results: \(error.localizedDescription)")
         }
+    }
+
+    func showSelectedCompletionDetails(completion: MKLocalSearchCompletion) {
+        if completion.subtitle == "Search Nearby" {
+            isSearchResultViewPresented.toggle()
+        } else {
+            selectedCompletion = completion
+        }
+        searchDetents = .medium
     }
 #endif
 }

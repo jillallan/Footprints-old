@@ -13,11 +13,16 @@ import OSLog
 class LocationSearchService: NSObject {
     let logger = Logger(category: String(describing: LocationSearchService.self))
 
+    var searchQuery: String = ""
     var completer: MKLocalSearchCompleter
     var completions = [MKLocalSearchCompletion]()
 
 //    private var searchContinuations: [CheckedContinuation<[MKLocalSearchCompletion], Error>] = []
-    private var searchContinuation: CheckedContinuation<[MKLocalSearchCompletion], Error>?
+    private var searchContinuation: CheckedContinuation<[MKLocalSearchCompletion], Error>? {
+        didSet {
+            logger.info("did set \(String(describing: self.searchContinuation))")
+        }
+    }
 
     override init() {
         completer = MKLocalSearchCompleter()
@@ -32,9 +37,8 @@ class LocationSearchService: NSObject {
             return
         }
 
-        completions = try await withCheckedThrowingContinuation { [weak self] continuation in
-            guard let self else { return continuation.resume(throwing: CancellationError()) }
-//            searchContinuations.append(continuation)
+        completions = try await withCheckedThrowingContinuation { continuation in
+            searchContinuation?.resume(throwing: CancellationError())
             searchContinuation = continuation
             completer.queryFragment = query
         }

@@ -101,8 +101,6 @@
 		7876EF5A2BFB94B60066F838 /* FootprintsWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF592BFB94B60066F838 /* FootprintsWatchUITests.swift */; };
 		7876EF5C2BFB94B60066F838 /* FootprintsWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876EF5B2BFB94B60066F838 /* FootprintsWatchUITestsLaunchTests.swift */; };
 		78774F672BE79D9A00903128 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78774F662BE79D9A00903128 /* TripView.swift */; };
-		7889886E2C3697BD0063175F /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889886D2C3697BD0063175F /* LocationView.swift */; };
-		7889886F2C3697BD0063175F /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889886D2C3697BD0063175F /* LocationView.swift */; };
 		789B6D2D2C1C8C9000B6C7F2 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E098B32C1C871E00CC384B /* LocationHandler.swift */; };
 		789B6D2E2C1C8C9100B6C7F2 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E098B32C1C871E00CC384B /* LocationHandler.swift */; };
 		789B6D332C1D9ACA00B6C7F2 /* LocationHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B6D322C1D9ACA00B6C7F2 /* LocationHandlerTests.swift */; };
@@ -278,7 +276,6 @@
 		7876EF5B2BFB94B60066F838 /* FootprintsWatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootprintsWatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7876EF632BFB964F0066F838 /* watchOSTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = watchOSTestPlan.xctestplan; sourceTree = "<group>"; };
 		78774F662BE79D9A00903128 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
-		7889886D2C3697BD0063175F /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		789B6D322C1D9ACA00B6C7F2 /* LocationHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandlerTests.swift; sourceTree = "<group>"; };
 		789B6D382C1DF60E00B6C7F2 /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
 		789B6D412C1F793D00B6C7F2 /* MKCoordinateRegion+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extension.swift"; sourceTree = "<group>"; };
@@ -438,7 +435,6 @@
 				78E098AD2C1C4F1D00CC384B /* StepView.swift */,
 				78E098AB2C1C4B6B00CC384B /* StepRow.swift */,
 				789B6D472C1F7EF500B6C7F2 /* StepDetailView.swift */,
-				7889886D2C3697BD0063175F /* LocationView.swift */,
 				789B6D492C20C7DA00B6C7F2 /* LocationEditorView.swift */,
 				780BEC012C20D48000D31F3E /* LocationSearchView.swift */,
 				780BEC062C20E0D300D31F3E /* LocationEditorSheet.swift */,
@@ -1092,7 +1088,6 @@
 				785BA3812BFB9B890002D8BC /* Trip-SampleData.swift in Sources */,
 				780BEBFC2C20D43100D31F3E /* MKCoordinateRegion+Extension.swift in Sources */,
 				785BA3932BFB9C0A0002D8BC /* PersistanceHandler.swift in Sources */,
-				7889886E2C3697BD0063175F /* LocationView.swift in Sources */,
 				785BA37F2BFB9B830002D8BC /* DateFormatter+Extension.swift in Sources */,
 				785BA3852BFB9B9C0002D8BC /* Trip.swift in Sources */,
 				780BEC002C20D43900D31F3E /* CLLocationCoordinate2D+Extension.swift in Sources */,
@@ -1172,7 +1167,6 @@
 				78774F672BE79D9A00903128 /* TripView.swift in Sources */,
 				78BB2EC62BCED19700CA8776 /* Trip-SampleData.swift in Sources */,
 				78E098B02C1C574400CC384B /* TripMap.swift in Sources */,
-				7889886F2C3697BD0063175F /* LocationView.swift in Sources */,
 				78119F332BE6887400A556EE /* PersistanceHandler.swift in Sources */,
 				780BEC072C20E0D300D31F3E /* LocationEditorSheet.swift in Sources */,
 				785BA39E2BFBFC6F0002D8BC /* Step-SampleData.swift in Sources */,
