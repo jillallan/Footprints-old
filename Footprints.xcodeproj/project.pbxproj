@@ -41,6 +41,9 @@
 		783D9A982C25747700A5F97E /* LocationSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D9A972C25747700A5F97E /* LocationSearchService.swift */; };
 		783D9A9A2C257E4400A5F97E /* LocationSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D9A972C25747700A5F97E /* LocationSearchService.swift */; };
 		784473AF2BE29814000E627D /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CDF5EE2BCDB279001F6466 /* AppTabView.swift */; };
+		7858634C2C38220D00134668 /* LocalSearchServiceBeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858634B2C38220D00134668 /* LocalSearchServiceBeta.swift */; };
+		7858634E2C38337C00134668 /* MapItemSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858634D2C38337C00134668 /* MapItemSearchService.swift */; };
+		785863502C38343C00134668 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858634F2C38343C00134668 /* Debouncer.swift */; };
 		785BA3782BFB9AA70002D8BC /* FootprintsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E217002BCD4E5E000C08F9 /* FootprintsApp.swift */; };
 		785BA37A2BFB9B510002D8BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E217022BCD4E5E000C08F9 /* ContentView.swift */; };
 		785BA37B2BFB9B780002D8BC /* EnvironmentValues+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7867278A2BCD51AA00D21CF5 /* EnvironmentValues+Extension.swift */; };
@@ -246,6 +249,9 @@
 		78119F322BE6887400A556EE /* PersistanceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceHandler.swift; sourceTree = "<group>"; };
 		78119F342BE68BF200A556EE /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		783D9A972C25747700A5F97E /* LocationSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchService.swift; sourceTree = "<group>"; };
+		7858634B2C38220D00134668 /* LocalSearchServiceBeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchServiceBeta.swift; sourceTree = "<group>"; };
+		7858634D2C38337C00134668 /* MapItemSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemSearchService.swift; sourceTree = "<group>"; };
+		7858634F2C38343C00134668 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		785BA3942BFB9C250002D8BC /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		785BA39B2BFBF4E00002D8BC /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		785BA39D2BFBFC6F0002D8BC /* Step-SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Step-SampleData.swift"; sourceTree = "<group>"; };
@@ -424,6 +430,9 @@
 				78119F322BE6887400A556EE /* PersistanceHandler.swift */,
 				78E098B32C1C871E00CC384B /* LocationHandler.swift */,
 				783D9A972C25747700A5F97E /* LocationSearchService.swift */,
+				7858634B2C38220D00134668 /* LocalSearchServiceBeta.swift */,
+				7858634D2C38337C00134668 /* MapItemSearchService.swift */,
+				7858634F2C38343C00134668 /* Debouncer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1186,9 +1195,12 @@
 				78BB2ED82BCF175E00CA8776 /* TripCard.swift in Sources */,
 				78BB2EDC2BD121DF00CA8776 /* Footprints.docc in Sources */,
 				78BB2EE52BD13F5100CA8776 /* Date+Extension.swift in Sources */,
+				785863502C38343C00134668 /* Debouncer.swift in Sources */,
+				7858634C2C38220D00134668 /* LocalSearchServiceBeta.swift in Sources */,
 				78024F1C2BDBE09E002BC7AC /* EqualWidthHStack.swift in Sources */,
 				780BEC022C20D48000D31F3E /* LocationSearchView.swift in Sources */,
 				78E098B42C1C871E00CC384B /* LocationHandler.swift in Sources */,
+				7858634E2C38337C00134668 /* MapItemSearchService.swift in Sources */,
 				784473AF2BE29814000E627D /* AppTabView.swift in Sources */,
 				78E098AE2C1C4F1D00CC384B /* StepView.swift in Sources */,
 				78119F272BE5722900A556EE /* OSLog+Extension.swift in Sources */,

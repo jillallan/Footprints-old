@@ -13,14 +13,15 @@ struct LocationSearchView: View {
     let logger = Logger(category: String(describing: LocationSearchService.self))
 
     @State var searchQuery = ""
+    @State var completions: [MKLocalSearchCompletion] = []
     @Binding var searchDetents: PresentationDetent
     #if !os(watchOS)
-    @State private var locationSearchService = LocationSearchService()
-//    let locationCompletionClosure: (MKLocalSearchCompletion) -> Void
+    @State var locationSearchServiceBeta = LocalSearchServiceBeta()
     #endif
     @State private var isSearchResultViewPresented: Bool = false
     @State private var selectedCompletion: MKLocalSearchCompletion?
     @Environment(\.dismiss) private var dismiss
+
 
 //    @Environment(\.isSearching) private var isSearching
 
@@ -33,7 +34,7 @@ struct LocationSearchView: View {
                     placement: .navigationBarDrawer(displayMode: .always)
                 )
                 .searchSuggestions {
-                    ForEach(locationSearchService.completions) { completion in
+                    ForEach(completions) { completion in
                         Button {
                             showSelectedCompletionDetails(completion: completion)
                         } label: {
@@ -54,6 +55,7 @@ struct LocationSearchView: View {
                         await updateSearchResults()
                     }
                 }
+
                 .sheet(item: $selectedCompletion) {
                     searchDetents = .large
                 } content: { completion in
@@ -79,10 +81,12 @@ struct LocationSearchView: View {
 #if !os(watchOS)
     @MainActor
     func updateSearchResults() async {
+
         do {
-            try await locationSearchService.updateSearchResults(query: searchQuery)
+            completions = try await locationSearchServiceBeta.provideCompletionSuggestions(for: searchQuery)
+//            try await locationSearchService.updateSearchResults(query: searchQuery)
         } catch {
-//            logger.error("Failed to fetch search results: \(error.localizedDescription)")
+            logger.error("Failed to fetch search results: \(error.localizedDescription)")
         }
     }
 
@@ -102,5 +106,4 @@ struct LocationSearchView: View {
 //    LocationSearchView(searchQuery: "Shops", searchDetents: .constant(.large)) { _ in
 //        // TODO:
 //    }
-//        .environment(LocationSearchService.preview)
 }

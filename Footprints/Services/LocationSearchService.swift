@@ -13,7 +13,6 @@ import OSLog
 class LocationSearchService: NSObject {
     let logger = Logger(category: String(describing: LocationSearchService.self))
 
-    var searchQuery: String = ""
     var completer: MKLocalSearchCompleter
     var completions = [MKLocalSearchCompletion]()
 
@@ -67,3 +66,5 @@ extension LocationSearchService {
 }
 
 extension MKLocalSearchCompletion: Identifiable { }
+
+extension MKLocalSearchCompletion: @unchecked Sendable { }
