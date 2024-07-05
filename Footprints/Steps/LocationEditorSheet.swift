@@ -14,7 +14,26 @@ struct LocationEditorSheet: View {
 
     var body: some View {
         List {
-            Text(currentLocationName)
+            Section {
+                Text(currentLocationName)
+            } header: {
+                Text("Current Location")
+            }
+
+            Section {
+                Text("Restaurants")
+                Text("Shops")
+            } header: {
+                Text("Recent Searches")
+            }
+
+            Section {
+                Text("Home")
+                Text("Weston-Super-Mare")
+            } header: {
+                Text("Recent Locations")
+            }
+
         }
         .onChange(of: isSearching) {
             if isSearching {

@@ -16,6 +16,7 @@ class LocationSearchService: NSObject {
     var completer: MKLocalSearchCompleter
     var completions = [MKLocalSearchCompletion]()
 
+//    private var searchContinuations: [CheckedContinuation<[MKLocalSearchCompletion], Error>] = []
     private var searchContinuation: CheckedContinuation<[MKLocalSearchCompletion], Error>?
 
     override init() {
@@ -26,7 +27,14 @@ class LocationSearchService: NSObject {
 
     @MainActor
     func updateSearchResults(query: String) async throws {
-        completions = try await withCheckedThrowingContinuation { continuation in
+
+        guard !query.isEmpty else {
+            return
+        }
+
+        completions = try await withCheckedThrowingContinuation { [weak self] continuation in
+            guard let self else { return continuation.resume(throwing: CancellationError()) }
+//            searchContinuations.append(continuation)
             searchContinuation = continuation
             completer.queryFragment = query
         }
@@ -35,12 +43,14 @@ class LocationSearchService: NSObject {
 
 extension LocationSearchService: MKLocalSearchCompleterDelegate {
     func completer(_ completer: MKLocalSearchCompleter, didFailWithError error: any Error) {
+//        searchContinuations.forEach { $0.resume(throwing: error) }
         searchContinuation?.resume(throwing: error)
         searchContinuation = nil
     }
 
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
         searchContinuation?.resume(returning: completer.results)
+//        searchContinuations.forEach { $0.resume(returning: completer.results) }
         searchContinuation = nil
     }
 }
@@ -53,4 +63,3 @@ extension LocationSearchService {
 }
 
 extension MKLocalSearchCompletion: Identifiable { }
-

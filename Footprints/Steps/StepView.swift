@@ -21,9 +21,9 @@ struct StepView: View {
             Text("Add step")
         }
         .navigationDestination(for: Step.self) { step in
-            StepDetailView(step: step)
+            StepDetailView(step: step, trip: trip, isNew: false)
         }
-        .listStyle(.plain)
+//        .listStyle(.plain)
     }
 }
 

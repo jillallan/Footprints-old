@@ -19,14 +19,20 @@ struct LocationEditorView: View {
         Map(initialPosition: .region(step.region)) {
             Marker("", coordinate: step.coordinate)
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .sheet(isPresented: .constant(true)) {
+
             LocationSearchView(searchDetents: $searchDetents)
+
                 .presentationDetents([.large, .medium, .fraction(0.2)], selection: $searchDetents)
                 .presentationBackgroundInteraction(.enabled)
                 .presentationContentInteraction(.automatic)
                 .interactiveDismissDisabled()
 //                .presentationDragIndicator(.visible)
         }
+//        .interactiveDismissDisabled(true)
+        .presentationDragIndicator(.visible)
     }
 }
 

@@ -31,9 +31,8 @@ struct TripDetailView: View {
             .sheet(isPresented: $isEditViewPresented) {
                 TripEditorView(trip: trip)
             }
-            .sheet(isPresented: $isAddStepViewPresented) {
-
-                StepDetailView(step: Step(timestamp: Date.now)) //, isNewStep: true)
+            .navigationDestination(isPresented: $isAddStepViewPresented) {
+                StepDetailView(step: Step(timestamp: Date.now), trip: trip, isNew: true)
             }
             .overlay {
                 VStack {
@@ -42,16 +41,13 @@ struct TripDetailView: View {
                         Spacer()
                         Button("Add Step", systemImage: "plus") {
                             Task {
-
                                 do {
                                     try await locationHandler.getCurrentLocation()
                                 } catch {
 
                                 }
-
                             }
                             isAddStepViewPresented.toggle()
-
                         }
                         .font(.largeTitle)
                         .labelStyle(.iconOnly)
@@ -78,6 +74,7 @@ struct TripDetailView: View {
     DataPreview {
         NavigationStack {
             TripDetailView(trip: .bedminsterToBeijing)
+                .environment(LocationHandler.preview)
         }
     } modelContainer: {
         SampleModelContainer.sample()
@@ -88,6 +85,7 @@ struct TripDetailView: View {
     DataPreview {
         NavigationStack {
             TripDetailView(trip: .anglesey)
+                .environment(LocationHandler.preview)
         }
     } modelContainer: {
         SampleModelContainer.sample()
@@ -98,6 +96,7 @@ struct TripDetailView: View {
     DataPreview {
         NavigationStack {
             TripDetailView(trip: .bedminsterToBeijing)
+                .environment(LocationHandler.preview)
         }
     } modelContainer: {
         SampleModelContainer.sample()

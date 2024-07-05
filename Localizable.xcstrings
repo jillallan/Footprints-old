@@ -33,6 +33,9 @@
     "Clear" : {
 
     },
+    "Current Location" : {
+
+    },
     "Date" : {
 
     },
@@ -62,6 +65,9 @@
         }
       }
     },
+    "Home" : {
+
+    },
     "Journal" : {
       "localizations" : {
         "es" : {
@@ -81,6 +87,24 @@
     "Pick something from the list." : {
 
     },
+    "Recent Locations" : {
+
+    },
+    "Recent Searches" : {
+
+    },
+    "Restaurants" : {
+
+    },
+    "Result 1" : {
+
+    },
+    "Result 2d" : {
+
+    },
+    "Result 3" : {
+
+    },
     "SAMPLES" : {
 
     },
@@ -95,6 +119,9 @@
       }
     },
     "Select a View" : {
+
+    },
+    "Shops" : {
 
     },
     "Start Date" : {
@@ -119,6 +146,9 @@
           }
         }
       }
+    },
+    "Weston-Super-Mare" : {
+
     }
   },
   "version" : "1.0"
